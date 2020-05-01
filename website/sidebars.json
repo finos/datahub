@@ -1,0 +1,10 @@
+{
+  "docs": {
+    "Docusaurus": ["notes-2018-07-25"],
+    "First Category": ["notes-2018-07-25"],
+    "Second Category": ["notes-2018-07-25"]
+  },
+  "docs-other": {
+    "First Category": ["notes-2018-07-25", "notes-2018-07-25"]
+  }
+}
