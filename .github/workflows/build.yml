@@ -41,6 +41,5 @@ jobs:
         run: python -m pip install -r requirements.txt
       - name: Check test coverage
         run: python -m pip install pytest pytest-cov coverage
-      # TODO - debug, why it's not completing
-      # - name: Run unit tests
-      #   run: python -m pytest --cov-report xml --cov=. --junitxml=test_results.xml ./tests
+      - name: Run unit tests
+        run: python -m pytest --cov-report xml --cov=. --junitxml=test_results.xml ./tests
