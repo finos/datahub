@@ -9,8 +9,9 @@
 const siteConfig = {
   title: 'DataHub',
   tagline: 'DataHub - produce synthetic datasets',
-  url: 'https://finos.github.io/datahub',
-  baseUrl: '/datahub/',
+  url: 'https://datahub.finos.org',
+  cname: 'datahub.finos.org',
+  baseUrl: '/',
   projectName: 'datahub',
   repoUrl: 'https://github.com/finos/datahub',
   organizationName: 'FINOS',
