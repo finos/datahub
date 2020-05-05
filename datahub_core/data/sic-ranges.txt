@@ -1,0 +1,6 @@
+6000	6799	Finance
+1000	1499	Mining
+4000	4999	Services
+2000	3999	Manufacturing
+1500	1799	Construction
+5000	5199	Wholesale Trade

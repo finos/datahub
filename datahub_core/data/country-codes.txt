@@ -1,0 +1,22 @@
+United States of America	US	USA	en_US	USD	NAM
+United Kingdom	GB	GBR	en_GB	GBP	EMEA
+France	FR	FRA	fr_FR	EUR	EMEA
+Germany	DE	DEU	de_DE	EUR	EMEA
+Italy	IT	ITA	it_IT	EUR	EMEA
+Canada	CA	CAN	en_CA	CAD	NAM
+Denmark	DK	DNK	dk_DK	DKK	EMEA
+Greece	GR	GRC	el_GR	EUR	EMEA
+Brazil	BR	BRA	pt_BR	BRL	LATAM
+Mexico	MX	MEX	es_MX	MXN	LATAM
+Australia	AU	AUS	en_AU	AUD	APAC
+Poland	PL	POL	pl_PL	EUR	EMEA
+Portugal	PT	PRT	pt_PT	EUR	EMEA
+Netherlands	NL	NLD	nl_NL	EUR	EMEA
+Estonia	EE	EST	et_EE	EUR	EMEA
+Hungary	HU	HUN	hu_HU	EUR	EMEA
+India	IN	IND	hi_IN	IND	APAC
+Slovenia	SI	SVN	sl_SI	EUR	EMEA
+Lithuania	LT	LTU	lt_LT	EUR	EMEA
+Russian Federation	RU	RUS	ru_RU	RUB	EMEA
+Turkey	TR	TUR	tr_TR	TRY	EMEA
+Ukraine	UA	UKR	uk_UA	UAH	EMEA

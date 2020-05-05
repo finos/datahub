@@ -1,0 +1,3053 @@
+[
+    {
+        "code": "0700",
+        "description": "Agricultural Services",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "", "Argiculture" ],
+            [ "", "Services" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}{x}", "{x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "agricultural", "services", "farming", "farm"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "0800",
+        "description": "Forestry",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Forest", "Land" ],
+            [ "Management" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}{x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "tree", "forestry", "wood", "oak", "cedar", "pulp", "land", "region", "natural"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "0900",
+        "description": "Fishing, Hunting and Trapping",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [  "Fishing", "Hunting" ],
+            [ "Reserves", "Reserve" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "fishing", "fish", "hunting", "outdoors", "trapping", "outdoors", "environment", "rugged", "natural"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "1000",
+        "description": "Metal Mining",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "rare", "titanic", "metal", "copper", "iron", "mine", "extract", "refine", "pit", "deep", "hole", "abyss", "dark"
+                ]
+            }
+        ],
+        "postfixes": [
+            [ "Copper", "Platinum", "Metals", "Rare Metals", "Zinc", "Metals", "Palladium", "Allied" ],
+            [ "Resources", "Mines" ]
+        ]
+    },
+    {
+        "code": "1040",
+        "description": "Gold and Silver Ores",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Gold",  "Solver", "Metals", "Rare Metals", "Metals", "Allied" ],
+            [ "", "Resources", "Mines", "Union" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "rare", "gold", "silver", "shiny", "expenisve", "extract", "yellow", "grey"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "1220",
+        "description": "Bituminous Coal & Lignite Mining",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Allied", "", "" ],
+            [ "Coal", "Bituminous", "lignite" ],
+            [ "Mines", "Minng" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "coal", "dirty", "pit", "colary", "pick", "coke", "fuel", "historic", "deep", "hole"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "1311",
+        "description": "Crude Petroleum & Natural Gas",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Crude", "Petroleum", "Natural Gas" ],
+            [ "Extraction", "" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "natural", "field", "gas", "butane", "oil", "crude", "mega", "petrol", "petroleum", "natural", "eco"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "1381",
+        "description": "Drilling Oil & Gas Wells",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Oil", "Gas" ],
+            [ "Well Management", "Drilling", "Wells", "Extraction" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "natural", "field", "gas", "butane", "oil", "crude", "mega", "petrol", "petroleum", "eco", "drill", "hole", "directional", "eco"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "1382",
+        "description": "Oil & Gas Field Exploration Services",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Oil", "Gas", "Natural Resource", "" ],
+            [ "", "Exploration" ],
+            [ "", "Services" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "oil", "gas", "gas", "butane", "exploration", "crude", "mega", "petrol", "petroleum", "services"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "1400",
+        "description": "Mining & Quarrying of Nonmetallic Minerals (No Fuels)",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [
+                "Minerals",
+                ""
+            ],
+            [
+                "Quarries",
+                "Mining"
+            ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "mining", "mine", "mineral", "quarry", "extraction", "open"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "1520",
+        "description": "General Bldg Contractors - Residential Bldgs",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "General", "Residential", "" ],
+            [ "Building Contractors" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "contractors", "building", "construction", "build", "make"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "1600",
+        "description": "Heavy Construction Other Than Bldg Const - Contractors",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Heavy", "" ],
+            [ "Construction", "Excavation" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "heavy", "land", "works", "excavation", "contractors", "building", "construction", "build", "make", "eco"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "1731",
+        "description": "Electrical Work",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Electrical" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "electrical", "work", "power", "energy"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2000",
+        "description": "Food and Kindred Products",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Food", "Wholefoos", "Natural" ],
+            [ "", "Products" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "foods", "whole", "delicious", "natural", "meat", "sausage", "eco", "vegan", "vegitarian", "canned"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2011",
+        "description": "Meat Packing Plants",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Meat Packing" ],
+            [ "Plant", "Plants" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "meat", "cow", "pig", "chicken", "entrails", "guts", "offal", "eco", "cat", "dog"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2020",
+        "description": "Dairy Products",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [
+                "",
+                "Dairy"
+            ],
+            [
+                "Products"
+            ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "milk", "cow", "dairy", "cheese", "moo"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2024",
+        "description": "Ice Cream & Frozen Desserts",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [
+                "",
+                "Frozen",
+                "Sweet",
+                "Dessert",
+                "Dairy",
+                "Synthetic"
+            ],
+            [
+                "Products"
+            ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "frozen", "dairy", "cream", "sweet", "icecream", "ice", "cold"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2030",
+        "description": "Canned, Frozen & Preserved Fruit, Veg & Food Specialties",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Frozen", "Canned", "Preserved", "" ],
+            [ "", "Fruit", "Veg", "Foods" ],
+            [ "Products", "" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "canned", "preserved", "boiled", "frozen"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2040",
+        "description": "Grain Mill Products",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "", "Grain" ],
+            [ "", "Mills", "Products" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "grain", "mill", "wheat", "barley", "corn", "products"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2050",
+        "description": "Bakery Products",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Bakers", "Bakery Products" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "bakers", "bread", "product", "warm", "tastey"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2060",
+        "description": "Sugar & Confectionery Products",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [
+                "Sweets", "Confectionery Products", "Confectioners"
+            ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "sugar", "Confectionery", "Products", "sweet", "chocolate"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2070",
+        "description": "Fats & Oils",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Manufacturing", "" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "fat", "oil", "whale", "seal", "puppy", "olive", "italian", "spanish", "vegetable"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2080",
+        "description": "Beverages",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Beverage", "" ],
+            [ "Products", "Manufacturing" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "beverage", "drink", "wine", "beer"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2092",
+        "description": "Prepared Fresh or Frozen Fish & Seafood",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Fresh", "Frozen", "Natural" ],
+            [ "Seafood", "Fish" ],
+            [ "Products", "Manfacutiring", "Farms" ]
+
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "fresh", "prepared", "frozen", "seafood", "tuna", "fish", "crab", "salmon", "cod", "deepsea"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2100",
+        "description": "Tobacco Products",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Tabacco" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "death", "gunge", "tobacco", "tar", "cigar", "cigar"
+                ]
+            }
+
+        ]
+    },
+    {
+        "code": "2200",
+        "description": "Textile Mill Products",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "", "Textile" ],
+            [ "Mills" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "textiles", "mill", "work", "fabric", "silk"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2421",
+        "description": "Sawmills & Planing Mills, General",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Sawmills", "Mills" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "mills", "wood", "raw", "material", "saw", "sawmill"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2451",
+        "description": "Mobile Homes",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "", "Mobile Homes" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "mobile", "homes"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2452",
+        "description": "Prefabricated Wood Bldgs & Components",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Prefabricated" ],
+            [ "Wood", "" ],
+            [ "Components", "Buldings", "" ],
+            [ "Manufacturing", "Products" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "wood", "buildings", "prefabricaetd", "fabricated"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2510",
+        "description": "Household Furniture",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "", "Furniture" ],
+            [ "Manufacturing", "Products" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "furniture", "Shelf", "desk", "Chair", "household", "home", "wood", "expenisve"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2520",
+        "description": "Office Furniture",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Office", "Commercial" ],
+            [ "Furniture" ],
+            [ "Products", "Manufacturing", "" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "furniture", "Shelf", "desk", "Chair", "office", "commercial", "hard", "wood", "executive"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2600",
+        "description": "Papers & Allied Products",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            ["Paper Products"]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "paper", "Card", "cardboard", "mills"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2711",
+        "description": "Newspapers: Publishing or Publishing & Printing",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Allied", "News", "Newspaper" ],
+            [ "Publishing", "Printing" ],
+            [ "Union", "Group", "Conglomoarte", "" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "newspaper", "publishing", "news", "printing", "today", "tomorrow", "yesterday", "post", "sun", "star", "gazzete", "fast"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2731",
+        "description": "Books: Publishing or Publishing & Printing",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Allied", "", "" ],
+            [ "Book" ],
+            [ "Publishing", "Printing" ],
+            [ "Union", "Group", "Conglomoarte", "" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "books", "publishing", "tome", "printing", "novel", "reading", "clever", "harper"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2750",
+        "description": "Commercial Printing",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Allied", "Commercial" ],
+            [ "Printing" ],
+            [ "Union", "Group", "Conglomoarte", "" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "books", "publishing", "tome", "printing", "commercial", "big"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2800",
+        "description": "Chemicals & Allied Products",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Eco", "Allied", "", "" ],
+            [ "Chemical", "Synthetic" ],
+            [ "Products", "Manufacturing", "Group" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "chemicals", "cleaning", "toxic", "natural", "eco", "envionment", "dangerous", "industrial", "commercial"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2833",
+        "description": "Medicinal Chemicals & Botanical Products",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Medical", "" ],
+            [ "Chemicals" ],
+            [ "Group", "Manufacturing", "Products" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "medical", "botanical", "chemical", "toxic", "clean", "eco", "dangerous"
+                ]
+            }
+        ]
+
+    },
+    {
+        "code": "2840",
+        "description": "Soap, Detergents, Cleaning Preparations, Perfumes, Cosmetics",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Detergent", "Cosmetic", "perfume" ],
+            [ "Manufacturig", "" ],
+            [ "Group", "", "Union" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Cleaning", "Detergents", "Soap", "Perfume", "Cosemtics", "smell", "nice", "clean", "scrub"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2891",
+        "description": "Adhesives & Sealants",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Allied","", "" ],
+            [ "Adhesives", "Sealants" ],
+            [ "Group", "Union" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "glue", "Adhesives", "Sealants"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2911",
+        "description": "Petroleum Refining",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Petroleum Refining" ],
+            [ "Group", "", "Union" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Petroleum", "Refining", "oil", "crude", "fuel"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "2950",
+        "description": "Asphalt Paving & Roofing Materials",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Allied", "", "" ],
+            [ "", "Roofing", "Asphal", "Paving" ],
+            [ "Materials", "", "products", "" ],
+            [ "Group", "Union", "Conglomorate", "Company", "" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Asphalt", "Paving", "Roofing", "Commercial", "Industrial"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3060",
+        "description": "Fabricated Rubber Products, NEC",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "", "Allied", "Vulcanised" ],
+            [ "Rubber" ],
+            [ "Products", "Materials" ],
+            [ "", "Group", "Union", "" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Rubber", "Fabricated", "Eco", "Vulcan", "Tough"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3089",
+        "description": "Plastics Products, NEC",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Commercial", "Industrial", "Allied", "", "" ],
+            [ "Plastics Group", "Plastics Conglomerate", "Plastics" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Plastics", "Products", "eco", "Industrial", "commercial"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3140",
+        "description": "Footwear, (No Rubber)",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Commercial", "Industrial", "Sports", "Specalist", "Casual", "Leather", "", "" ],
+            [ "Footware" ],
+            [ "", "Corporation", "Group" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Footwear", "Products", "commercial", "leather", "sports"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3270",
+        "description": "Concrete, Gypsum & Plaster Products",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Allied", "", "" ],
+            [ "Gypsum", "Concrete", "Plaster", "" ],
+            [ "Products", "Materials" ],
+            [ "Group", "Corporation", "Union" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "concrete", "plaster", "gypsum", "industrial", "hard", "rough"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3320",
+        "description": "Iron & Steel Foundries",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+            [ "Steel", "Iron" ],
+            [ "Works", "Foundry" ],
+            [ "Group", "Corporation", "" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Steel", "Foundry", "Furnaces", "Rolling", "Blast", "hot", "Iron", "Ore"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3330",
+        "description": "Primary Smelting & Refining of Nonferrous Metals",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+            [ "Allied", "", "" ],
+            [ "Metal", "" ],
+            [ "Smelting", "Refining" ],
+            [ "Group", "Corporation", "Union", "", "" ]
+
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Foundry", "Furnaces", "Smelting", "Refining", "Aluminum", "ferrous"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3430",
+        "description": "Heating Equip, Except Elec & Warm Air; & Plumbing Fixtures",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+            [ "Heating", "Plumbing" ],
+            [ "", "Equipment" ],
+            [ "Corporation", "Group", "", "" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Heating", "Plumbing"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3442",
+        "description": "Metal Doors, Sash, Frames, Moldings & Trim",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+            [ "Doors", "Frames", "Molding", "", "" ],
+            [ "Group", "Corporation", "Products", "Manufacturing" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Doors", "Frames", "Metal"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3444",
+        "description": "Sheet Metal Work",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+            [   "Allied", "", "", "" ],
+            [ "Sheet Metal", "Metal Works" ],
+            [ "Group", "Corporation" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Sheet", "Metal", "Rolling", "folding", "steel"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3510",
+        "description": "Engines & Turbines",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+            [ "Engine", "Turbine", "", "" ],
+            [ "Corporation", "Group", "Conglomerate", "" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Engines", "Turbines", "Jet", "Power", "Motion", "Big", "Power", "Wind", "Eco"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3523",
+        "description": "Farm Machinery & Equipment",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+            [ "Corporation", "Group", "", "" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Farm", "Machinery", "Hardware", "Equipment"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3531",
+        "description": "Construction Machinery & Equip",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Construction", "" ],
+            [ "Machinery", "Equipment", "Products" ],
+            [ "Corporation", "Group", "" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Construction", "Handling", "Machinery", "Equipment"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3560",
+        "description": "General Industrial Machinery & Equipment",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "General", "", "" ],
+            [ "Industrial", "" ],
+            [ "Machinery", "Equipment" ],
+            [ "Group", "Corporation" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "General", "Industry", "Machinery", "Equipment", "Industrial"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3570",
+        "description": "Computer & office Equipment",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+            [ "Office", "Computer", "" ],
+            [ "Equipment" ],
+            [ "Corporation", "Group", "", "", "" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Computer", "Equipment", "office", "supply", "products"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3571",
+        "description": "Electronic Computers",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+            [ "Technologies", "", "", "" ],
+            [ "Corporation", "Group" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Computer", "Equipment", "Electronic"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3577",
+        "description": "Computer Peripheral Equipment, NEC",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+            [ "Coputer Peripherals", "", "", "", "Technology Pergierals" ],
+            [ "Corporation", "Group", "" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Computer", "Peripheral", "Equipment"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3580",
+        "description": "Refrigeration & Service Industry Machinery",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Industrial", "Commercial", "", "" ],
+            [ "Refrigeration", "" ],
+            [ "Services", "Machinery", "Products" ],
+            [ "Group", "Corporation", "", "", "" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Machines", "Equipment", "Refrigeration", "Industrial", "Commercial", "Cold", "Freezer"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3620",
+        "description": "Electrical Industrial Apparatus",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+            [ "Industrial", "Commercial", "", "" ],
+            [ "Electrics", "Electrical Apparatus", "" ],
+            [ "Corporation", "Group", "", "" ]
+
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Electrical", "Industrial", "Specialty", "Apparatus", "Electrical"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3630",
+        "description": "Household Appliances",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+            [ "Appliances", "", "" ],
+            [ "Corporation", "Group" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Household", "Appliances", "Blender", "Mixer", "Hoover", "Vacuum"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3640",
+        "description": "Electric Lighting & Wiring Equipment",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+            [ "Electrical Equipment" ],
+            [ "Corporation", "Group" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Electric", "Lighting", "Wiring", "Equipment", "Eco"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3651",
+        "description": "Household Audio & Video Equipment",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Electric", "Audio", "Household", "Equipment", "Video"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3663",
+        "description": "Radio & TV Broadcasting & Communications Equipment",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Radio", "Broadcasting", "Communications", "Equipment", "TV"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3672",
+        "description": "Printed Circuit Boards",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Printed", "Circuit", "Boards", "Electronic", "Industries", "Commercial"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3679",
+        "description": "Electronic Components, NEC",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Electronic", "Components", "Industries", "Commercial"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3714",
+        "description": "Motor Vehicle Parts & Accessories",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Truck", "Bus", "Parts", "Accessories"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3721",
+        "description": "Aircraft",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Aircraft", "Aero", "plane", "blimp", "fly", "dynamic", "eco"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3743",
+        "description": "Railroad Equipment",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Railroad", "heavy", "train", "equipment", "signal"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3760",
+        "description": "Guided Missiles & Space Vehicles & Parts",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Guided", "Missiles", "Space", "tech", "parts"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3812",
+        "description": "Search, Detection, Navigation, Guidance, Aeronautical Sys",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Search", "Detection", "Navigation", "Guidance", "Aeronautical", "Space", "Radar"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3821",
+        "description": "Laboratory Apparatus & Furniture",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Laboratory", "Apparatus", "Equipment", "Machinary", "Furniture"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3823",
+        "description": "Industrial Instruments For Measurement, Display, and Control",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Controls", "Environments", "Industrial", "Measurement"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3841",
+        "description": "Surgical & Medical Instruments & Apparatus",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Laboratory", "Surgical", "Medical", "Measurement", "Instruments", "Apparatus"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3944",
+        "description": "Games, Toys & Children's Vehicles (No Dolls & Bicycles)",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Games", "Toys", "Children", "Vehicles"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3949",
+        "description": "Sporting & Athletic Goods, NEC",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Sporting", "Shoes", "Athletic", "Sports"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "3960",
+        "description": "Costume Jewelry & Novelties",
+        "method": "markov",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Bling", "Fake", "Jewlry", "Costume"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "4100",
+        "description": "Local & Suburban Transit & Interurban Hwy Passenger Trans",
+        "client_type": [ "COMMERCIAL CORPORATION" ],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Local", "transit", "passanger", "urban", "inter", "taxi", "move", "fast", "hyper"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "4210",
+        "description": "Trucking & Courier Services (No Air)",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Trucking", "Courier", "Services", "Company", "Delivery", "Eco", "Hyper", "Fast", "Global", "Trans"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "4220",
+        "description": "Public Warehousing & Storage",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Warehouse", "Store", "Urn", "Container", "Storeage"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "4400",
+        "description": "Water Transportation",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Ferries", "Water", "Boat", "Ocean", "Liner", "Transport"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "4412",
+        "description": "Deep Sea Foreign Transportation of Freight",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "International", "Freight", "Ocean", "Cargo", "Transport", "ship"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "4512",
+        "description": "Air Transportation, Scheduled",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Air", "Transportation", "Passanger", "Airways", "Global"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "4513",
+        "description": "Air Courier Services",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Air", "Transportation", "Courier", "Airways", "Global"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "4581",
+        "description": "Airports, Flying Fields & Airport Terminal Services",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Airport", "Transportation", "Airways", "Global"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "4813",
+        "description": "Telephone Communications (No Radiotelephone)",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Communictations", "Telephone", "Global", "Intra", "Inter"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "4832",
+        "description": "Radio Broadcasting Stations",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Radio", "Broadcasting", "Global", "Intra", "Inter", "FM", "AM", "Capital", "City"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "4833",
+        "description": "Television Broadcasting Stations",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Television", "Broadcasting", "Global", "Intra", "Inter", "TV", "AM", "Capital", "City"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "4911",
+        "description": "Electric Services",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Electric",  "Services", "Electrical", "Power", "Energy"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "4941",
+        "description": "Water Supply",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Eau",  "Water", "Supply", "Move", "Eco"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "4953",
+        "description": "Refuse Systems",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Rubbish",  "Refuse", "Eco", "Waste", "Systems"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "5020",
+        "description": "Wholesale-Furniture & Home Furnishings",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Furniute",  "Home", "Wholesale", "Sell", "Warehouse"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "5030",
+        "description": "Wholesale-Lumber & Other Construction Materials",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Wood",  "Lumber", "Wholesale", "Sell", "Warehouse"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "5080",
+        "description": "Wholesale-Machinery, Equipment & Supplies",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Machinary", "Appliance", "Wholesale",  "Eco", "Equipment"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "5122",
+        "description": "Wholesale-Drugs, Proprietaries & Druggists' Sundries",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Paper", "Card", "Wholesale", "Eco", "roll", "Ream"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "5311",
+        "description": "Retail-Department Stores",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "5400",
+        "description": "Retail-Food Stores",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "5412",
+        "description": "Retail-Convenience Stores",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "5500",
+        "description": "Retail-Auto Dealers & Gasoline Stations",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "5651",
+        "description": "Retail-Family Clothing Stores",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "5661",
+        "description": "Retail-Shoe Stores",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "5731",
+        "description": "Retail-Radio, TV & Consumer Electronics Stores",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "5734",
+        "description": "Retail-Computer & Computer Software Stores",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "5735",
+        "description": "Retail-Record & Prerecorded Tape Stores",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "5810",
+        "description": "Retail-Eating & Drinking Places",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Restaurants", "Foods", "", "" ],
+            [ "Group", "Corporation" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "5912",
+        "description": "Retail-Drug Stores and Proprietary Stores",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "5940",
+        "description": "Retail-Miscellaneous Shopping Goods Stores",
+        "client_type": ["COMMERCIAL CORPORATION"],
+        "postfixes": [
+            [ "Cooperative", "", "" ],
+            [ "", "", "", "General" ],
+            [ "Stores", "", "" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "6021",
+        "description": "National Commercial Banks",
+        "client_type": [ "NON-US BANK", "US BANK", "NON-US TRUST", "MUTUAL FUND", "UCITS FUND", "PENSION", "ICAV", "US TRUST", "CENTRAL BANK", "CREDIT UNION/THRIFT"],
+        "postfixes": [
+            [ "National", "", "" ],
+            [ "Commercial", "", "" ],
+            [ "Bank" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}","{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [ "national", "commercial", "bank", "finance" ]
+            }
+        ]
+    },
+    {
+        "code": "6035",
+        "description": "Savings Institution, Federally Chartered",
+        "client_type": ["FINANCE/MORTGAGE COMPANY", "CREDIT UNION/THRIFT"],
+        "postfixes": [
+            [ "Chartered", "", "" ],
+            [ "Savings", "", "" ],
+            [ "Group", "Union" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}","{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "savings", "national", "mega", "chartered", "bank", "finance", "Investment", "Granite", "Red", "Blue"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "6162",
+        "description": "Mortgage Bankers & Loan Correspondents",
+        "client_type": ["FINANCE/MORTGAGE COMPANY", "CREDIT UNION/THRIFT"],
+        "postfixes": [
+            [ "Mortgages", "Loans", "", "" ],
+            [ "Union", "Group", "", "" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}","{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "savings", "national", "mega", "mortgages", "loans", "Mortgage", "bankers", "housing"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "6163",
+        "description": "Loan Brokers",
+        "client_type": ["FINANCE/MORTGAGE COMPANY", "CREDIT UNION/THRIFT"],
+        "postfixes": [
+            ["Loans", "Loan Broker", "Brokers", "Financial", "Financial Brokers"]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}","{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "savings", "national", "mega", "bank", "loan", "brokers"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "6189",
+        "description": "Asset-Backed Securities",
+        "client_type": ["FUTURES COMMISSION MERCHANT", "PRIVATE EQUITY", "HEDGE FUND", "SPECIAL PURPOSE VEHICLE (SPV)", "UNIT TRUST", "MUTUAL - CLOSED ENDED", "FUND OF FUNDS", "MUTUAL - 40 ACT",
+        "TENDER OPTION BONDS", "POOLED FUND", "PERSONAL HOLDING/INVESTMENT COMPANY", "KVG", "MUTUAL - CANADIAN", "(PERSONAL HOLDING/INVESTMENT COMPANY",
+        "FCP", "INTERNATIONAL ORGANIZATION", "PARTNERSHIP", "MUTUAL - ETF", "ENDOWMENT", "COMMON INVESTMENT FUND", "ICVC",
+        "COMMINGLED FUND", "DEFINED BENEFIT PLAN", "PRIVATE INVESTMENT COMPANY (PIC)", "SICAV-SIF",
+        "PENSION - CORPORATION",
+        "PENSION - CONTRIBUTION",
+        "FOUNDATION",
+        "GOVERNMENT AGENCY",
+        "PENSION - PUBLIC",
+        "PENSION - ERISA",
+        "PENSION - DEFINED BENEFIT",
+        "PENSION - DUTCH",
+        "NON-FOR PROFIT",
+        "CORPORATE JOINT VENTURE",
+        "INTERNATIONAL ORGANIZATION",
+        "LIMITED PARTNERSHIP (LP)",
+        "RETAIL",
+        "PRIVATE CHARITY",
+        "CENTRAL BANK**8MUTUAL - ETF",
+        "INDIVIDUAL",
+        "OTHER NON-US FIDUCIARY VEHICLE",
+        "SICAV-SIF",
+        "EDUCATIONAL",
+        "PUBLIC CHARITY",
+        "CLOSELY HELD NON-OPERATING COMPANY",
+        "CORPORATE ACQUISITION VEHICLE",
+        "SICAV",
+        "CURRENCY DEALER/EXCHANGE/MONEY REMITTER",
+        "VENTURE CAPITAL",
+        "COMMODITY SUBSIDIARY",
+        "FGR"
+     ],
+        "postfixes": [
+            [
+                "Securities",
+                "Asset Managers",
+                "Associates",
+                "Investment Managers",
+                "International",
+                "Management"
+            ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}","{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Rock", "Granite", "Blue", "Start", "Fund", "Management", "Security", "Investment"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "6199",
+        "description": "Finance Services",
+        "client_type": ["INTERMEDIARY", "MONEY MANAGER CORPORATE", "MONEY MANAGER", "INVESTMENT TRUST"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}","{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "savings", "national", "mega", "bank", "corp", "city", "finance", "savings", "save"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "6211",
+        "description": "Security Brokers, Dealers & Flotation Companies",
+        "method": "markov",
+        "client_type": ["BROKER/DEALER"],
+        "postfixes": [
+            ["Investment Advisors", "Investments", "Advisors", "Management", "Financial"]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}","{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "national", "mega", "squid", "security", "advice", "investment"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "6282",
+        "description": "Investment Advice",
+        "client_type": ["INVESTMENT ADVISOR"],
+        "postfixes": [
+            ["Investment Advisors", "Investments", "Advisors", "Management", "Financial"]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}","{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "advisors", "mutual", "fund", "finance", "national", "mega", "investment", "advice"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "6311",
+        "description": "Life Insurance",
+        "client_type": ["INSURER", "INSURANCE"],
+        "postfixes": [
+            ["Life", "Insurance"]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}","{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [ "insurance", "national", "mega", "life", "health" ]
+            }
+        ]
+    },
+    {
+        "code": "6321",
+        "description": "Accident & Health Insurance",
+        "client_type": ["INSURER", "INSURANCE"],
+        "postfixes": [
+            ["Insurance"]
+
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}","{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "6500",
+        "description": "Real Estate",
+        "client_type": "REIT (REAL ESTATE INVESTMENT TRUST)",
+        "postfixes": [
+            ["Real Estate"]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}","{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "6552",
+        "description": "Land Subdividers & Developers (No Cemeteries)",
+        "client_type": ["COMMERCIAL CORPORATION", "LIMITED LIABILITY COMPANY (LLC)"],
+        "postfixes": [
+            ["Land", "Developers", "Land Developers"]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}","{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "6798",
+        "description": "Real Estate Investment Trusts",
+        "client_type": ["REIT (REAL ESTATE INVESTMENT TRUST)"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "6799",
+        "description": "Investors",
+        "client_type": ["PRIVATE INVESTMENT COMPANY (PIC)", "PERSONAL HOLDING/INVESTMENT COMPANY"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "7011",
+        "description": "Hotels & Motels",
+        "method": "markov",
+        "client_type": ["COMMERCIAL CORPORATION", "LIMITED LIABILITY COMPANY (LLC)"],
+        "postfixes": [
+            ["Hotels"]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "7311",
+        "description": "Services-Advertising Agencies",
+        "client_type": ["COMMERCIAL CORPORATION", "LIMITED LIABILITY COMPANY (LLC)"],
+        "postfixes": [
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "7361",
+        "description": "Services-Employment Agencies",
+        "client_type": ["COMMERCIAL CORPORATION", "LIMITED LIABILITY COMPANY (LLC)"],
+        "postfixes": [
+            ["Employment", "Agenecy", "", ""]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "7371",
+        "description": "Services-Computer Programming Services",
+        "client_type": ["COMMERCIAL CORPORATION", "LIMITED LIABILITY COMPANY (LLC)"],
+        "postfixes": [
+            ["Software", "Computer Services"]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "7812",
+        "description": "Services-Motion Picture & Video Tape Production",
+        "client_type": ["COMMERCIAL CORPORATION", "LIMITED LIABILITY COMPANY (LLC)"],
+        "postfixes": [
+            ["Production"]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Motion", "Film", "Picture", "Production", "Allied"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "7822",
+        "description": "Services-Motion Picture & Video Tape Distribution",
+        "client_type": ["COMMERCIAL CORPORATION", "LIMITED LIABILITY COMPANY (LLC)"],
+        "postfixes": [
+            ["Distribution", "Film Distribution"]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Motion", "Film", "Picture", "Production", "Allied", "Distribution", "united"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "7830",
+        "description": "Services-Motion Picture Theaters",
+        "client_type": ["COMMERCIAL CORPORATION", "LIMITED LIABILITY COMPANY (LLC)"],
+        "postfixes": [
+            ["Pictures", "Theaters", "Motion Pictures", "Films"]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Motion", "Film", "Picture", "Production", "Allied", "Distribution", "united", "theater"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "7994",
+        "description": "Services-Video Game Arcades",
+        "client_type": ["COMMERCIAL CORPORATION", "LIMITED LIABILITY COMPANY (LLC)"],
+        "postfixes": [
+            [ "Games", "Arcades", "Gaming" ]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "7996",
+        "description": "Services-Amusement Parks",
+        "client_type": ["COMMERCIAL CORPORATION", "LIMITED LIABILITY COMPANY (LLC)"],
+        "postfixes": [
+            ["Entertainment", "Amusement Parks", "Parks"]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "themepark", "theme", "outdoor", "park", "Rental", "amustment", "fun"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "8060",
+        "description": "Services-Hospitals",
+        "client_type": ["COMMERCIAL CORPORATION", "LIMITED LIABILITY COMPANY (LLC)"],
+        "postfixes": [
+            ["Medical", "Hospital", "Clinical"]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "8071",
+        "description": "Services-Medical Laboratories",
+        "client_type": ["COMMERCIAL CORPORATION", "LIMITED LIABILITY COMPANY (LLC)"],
+        "postfixes": [
+            ["Laboratories", "Medical", "Medical Laboratories"]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            }
+        ]
+    },
+    {
+        "code": "8111",
+        "description": "Services-Legal Services",
+        "client_type": ["COMMERCIAL CORPORATION", "LIMITED LIABILITY COMPANY (LLC)"],
+        "postfixes": [
+            [ "Legal Services", "Legal"]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Services", "Legal", "Lawyer", "Soliciter"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "8351",
+        "description": "Services-Child Day Care Services",
+        "client_type": ["COMMERCIAL CORPORATION", "LIMITED LIABILITY COMPANY (LLC)"],
+        "postfixes": [
+             ["Day Care", "Children Care Services"]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Services", "Child", "Kid", "Tiny", "Tot", "Day", "Care"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "8742",
+        "description": "Services-Management Consulting Services",
+        "client_type": ["COMMERCIAL CORPORATION", "LIMITED LIABILITY COMPANY (LLC)"],
+        "postfixes": [
+            ["Consulting Services", "Management Services", "Management Consulting Services"]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Service", "Management", "Consulting"
+                ]
+            }
+        ]
+    },
+    {
+        "code": "1000000",
+        "description": "Services-Management Consulting Services",
+        "client_type": ["RELIGIOUS"],
+        "postfixes": [
+            ["Church Of"]
+        ],
+        "models": [
+            {
+                "blend": 50,
+                "type": "markov",
+                "file": "./data/company_names.txt",
+                "masks": [ "{x}", "{x}", "{x}", "{x}", "{x}", "{x}{x}", "{x}-{x}", "{x} & {x}", "{x}, {x} & {x}" ]
+            },
+            {
+                "blend": 50,
+                "type": "nlp",
+                "words": [
+                    "Church", "God", "Jesus"
+                ]
+            }
+        ]
+    }
+]

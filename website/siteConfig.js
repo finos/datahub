@@ -6,30 +6,25 @@
 // See https://docusaurus.io/docs/site-config for all the possible
 // site configuration options.
 
-const users = require('./data/users.json');
-
 const siteConfig = {
-  // GitHub repository coordinates
-  // Change the following items replacing 'project-blueprint' with your repository name
-  title: 'FINOS Project Blueprint', // Title for your website.
-  tagline: 'FINOS Project Blueprint',
-  url: 'https://finos.github.io/project-blueprint',
-  baseUrl: '/project-blueprint/',
-  projectName: 'project-blueprint',
-  repoUrl: 'https://github.com/finos/project-blueprint',
+  title: 'DataHub',
+  tagline: 'DataHub - produce synthetic datasets',
+  url: 'https://finos.github.io/datahub',
+  baseUrl: '/datahub/',
+  projectName: 'datahub',
+  repoUrl: 'https://github.com/finos/datahub',
   organizationName: 'FINOS',
 
   // Header menu
   // We suggest that Docs, Roadmap, Team and GitHub items are available
   headerLinks: [
-    {doc: '', label: 'Docs'},
-    {doc: '', label: 'Roadmap'},
-    {doc: '', label: 'Team'},
-    {href: 'https://github.com/finos/project-blueprint', label: 'GitHub'},
+    {doc: 'home', label: 'Docs'},
+    {doc: 'roadmap', label: 'Roadmap'},
+    {doc: 'team', label: 'Team'},
+    {href: 'https://github.com/finos/databub', label: 'GitHub'},
     {blog: false}
   ],
-  users,
-
+  
   // Update icon files with program/project logos
   headerIcon: 'img/favicon/favicon-finos.ico',   
   footerIcon: 'img/favicon/favicon-finos.ico',
@@ -41,7 +36,7 @@ const siteConfig = {
   },
 
   // Change the copyright info with correct program/project names */
-  copyright: `Copyright © ${new Date().getFullYear()} Project Blueprint - FINOS`,
+  copyright: `Copyright © ${new Date().getFullYear()} DataHub - Citi`,
 
   highlight: {
     theme: 'default',

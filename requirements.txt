@@ -1,0 +1,14 @@
+mkdocs
+mkdocs-ivory
+numpy
+pandas
+pydoc-markdown
+pylint
+pytest
+scipy
+Faker
+joblib
+statsmodels
+matplotlib
+joblib
+sklearn

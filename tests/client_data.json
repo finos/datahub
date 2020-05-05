@@ -1,0 +1,914 @@
+{
+  "region": {
+    "APAC": {
+      "count": 5070,
+      "client_type": {
+        "BROKER/DEALER": {
+          "count": 218,
+          "ratio": 0.04299802761341223
+        },
+        "CENTRAL BANK": {
+          "count": 20,
+          "ratio": 0.0039447731755424065
+        },
+        "CLOSELY HELD NON-OPERATING COMPANY": {
+          "count": 26,
+          "ratio": 0.005128205128205128
+        },
+        "COMMERCIAL CORPORATION": {
+          "count": 568,
+          "ratio": 0.11203155818540433
+        },
+        "COMMODITY SUBSIDIARY": {
+          "count": 5,
+          "ratio": 0.0009861932938856016
+        },
+        "COMMON INVESTMENT FUND": {
+          "count": 16,
+          "ratio": 0.003155818540433925
+        },
+        "CORPORATE ACQUISITION VEHICLE": {
+          "count": 2,
+          "ratio": 0.0003944773175542406
+        },
+        "CREDIT UNION/THRIFT": {
+          "count": 1,
+          "ratio": 0.0001972386587771203
+        },
+        "CURRENCY DEALER/EXCHANGE/MONEY REMITTER": {
+          "count": 2,
+          "ratio": 0.0003944773175542406
+        },
+        "EDUCATIONAL": {
+          "count": 1,
+          "ratio": 0.0001972386587771203
+        },
+        "ENDOWMENT": {
+          "count": 1,
+          "ratio": 0.0001972386587771203
+        },
+        "FCP": {
+          "count": 1,
+          "ratio": 0.0001972386587771203
+        },
+        "FINANCE/MORTGAGE COMPANY": {
+          "count": 23,
+          "ratio": 0.004536489151873767
+        },
+        "FOUNDATION": {
+          "count": 1,
+          "ratio": 0.0001972386587771203
+        },
+        "FUND OF FUNDS": {
+          "count": 141,
+          "ratio": 0.027810650887573965
+        },
+        "FUTURES COMMISSION MERCHANT": {
+          "count": 6,
+          "ratio": 0.001183431952662722
+        },
+        "GOVERNMENT AGENCY": {
+          "count": 61,
+          "ratio": 0.012031558185404339
+        },
+        "HEDGE FUND": {
+          "count": 654,
+          "ratio": 0.1289940828402367
+        },
+        "INDIVIDUAL": {
+          "count": 3,
+          "ratio": 0.000591715976331361
+        },
+        "INSURANCE": {
+          "count": 3,
+          "ratio": 0.000591715976331361
+        },
+        "INSURER": {
+          "count": 122,
+          "ratio": 0.024063116370808678
+        },
+        "INTERMEDIARY": {
+          "count": 29,
+          "ratio": 0.005719921104536489
+        },
+        "INTERNATIONAL ORGANIZATION": {
+          "count": 12,
+          "ratio": 0.002366863905325444
+        },
+        "INVESTMENT ADVISOR": {
+          "count": 948,
+          "ratio": 0.18698224852071005
+        },
+        "INVESTMENT TRUST": {
+          "count": 110,
+          "ratio": 0.021696252465483234
+        },
+        "KVG": {
+          "count": 1,
+          "ratio": 0.0001972386587771203
+        },
+        "MONEY MANAGER": {
+          "count": 558,
+          "ratio": 0.11005917159763313
+        },
+        "MONEY MANAGER CORPORATE": {
+          "count": 23,
+          "ratio": 0.004536489151873767
+        },
+        "MUTUAL - 40 ACT": {
+          "count": 13,
+          "ratio": 0.002564102564102564
+        },
+        "MUTUAL - CANADIAN": {
+          "count": 2,
+          "ratio": 0.0003944773175542406
+        },
+        "MUTUAL - CLOSED ENDED": {
+          "count": 120,
+          "ratio": 0.023668639053254437
+        },
+        "MUTUAL - ETF": {
+          "count": 25,
+          "ratio": 0.004930966469428008
+        },
+        "MUTUAL FUND": {
+          "count": 518,
+          "ratio": 0.10216962524654832
+        },
+        "NON-US BANK": {
+          "count": 312,
+          "ratio": 0.06153846153846154
+        },
+        "NON-US TRUST": {
+          "count": 10,
+          "ratio": 0.0019723865877712033
+        },
+        "OTHER NON-US FIDUCIARY VEHICLE": {
+          "count": 12,
+          "ratio": 0.002366863905325444
+        },
+        "PARTNERSHIP": {
+          "count": 6,
+          "ratio": 0.001183431952662722
+        },
+        "PENSION": {
+          "count": 76,
+          "ratio": 0.014990138067061143
+        },
+        "PENSION - CONTRIBUTION": {
+          "count": 9,
+          "ratio": 0.0017751479289940828
+        },
+        "PENSION - CORPORATION": {
+          "count": 2,
+          "ratio": 0.0003944773175542406
+        },
+        "PENSION - PUBLIC": {
+          "count": 5,
+          "ratio": 0.0009861932938856016
+        },
+        "PERSONAL HOLDING/INVESTMENT COMPANY": {
+          "count": 88,
+          "ratio": 0.01735700197238659
+        },
+        "POOLED FUND": {
+          "count": 1,
+          "ratio": 0.0001972386587771203
+        },
+        "PRIVATE EQUITY": {
+          "count": 49,
+          "ratio": 0.009664694280078896
+        },
+        "PRIVATE INVESTMENT COMPANY (PIC)": {
+          "count": 4,
+          "ratio": 0.0007889546351084812
+        },
+        "PUBLIC CHARITY": {
+          "count": 1,
+          "ratio": 0.0001972386587771203
+        },
+        "REIT (REAL ESTATE INVESTMENT TRUST)": {
+          "count": 3,
+          "ratio": 0.000591715976331361
+        },
+        "RETAIL": {
+          "count": 5,
+          "ratio": 0.0009861932938856016
+        },
+        "SICAV": {
+          "count": 45,
+          "ratio": 0.008875739644970414
+        },
+        "SICAV-SIF": {
+          "count": 1,
+          "ratio": 0.0001972386587771203
+        },
+        "SPECIAL PURPOSE VEHICLE (SPV)": {
+          "count": 37,
+          "ratio": 0.007297830374753451
+        },
+        "UCITS FUND": {
+          "count": 17,
+          "ratio": 0.0033530571992110452
+        },
+        "UNIT TRUST": {
+          "count": 146,
+          "ratio": 0.028796844181459565
+        },
+        "US BANK": {
+          "count": 7,
+          "ratio": 0.0013806706114398422
+        }
+      },
+      "ratio": 0.09292351679771266
+    },
+    "EMEA": {
+      "count": 20395,
+      "client_type": {
+        "BROKER/DEALER": {
+          "count": 595,
+          "ratio": 0.029173817112037263
+        },
+        "CENTRAL BANK": {
+          "count": 86,
+          "ratio": 0.004216719784260848
+        },
+        "CLOSELY HELD NON-OPERATING COMPANY": {
+          "count": 11,
+          "ratio": 0.0005393478793822015
+        },
+        "COMMERCIAL CORPORATION": {
+          "count": 3275,
+          "ratio": 0.1605785731797009
+        },
+        "COMMODITY SUBSIDIARY": {
+          "count": 11,
+          "ratio": 0.0005393478793822015
+        },
+        "COMMON INVESTMENT FUND": {
+          "count": 15,
+          "ratio": 0.0007354743809757293
+        },
+        "CORPORATE ACQUISITION VEHICLE": {
+          "count": 5,
+          "ratio": 0.00024515812699190976
+        },
+        "CORPORATE JOINT VENTURE": {
+          "count": 4,
+          "ratio": 0.00019612650159352783
+        },
+        "CREDIT UNION/THRIFT": {
+          "count": 3,
+          "ratio": 0.00014709487619514588
+        },
+        "CURRENCY DEALER/EXCHANGE/MONEY REMITTER": {
+          "count": 31,
+          "ratio": 0.0015199803873498406
+        },
+        "DEFINED BENEFIT PLAN": {
+          "count": 2,
+          "ratio": 9.806325079676392e-05
+        },
+        "EDUCATIONAL": {
+          "count": 2,
+          "ratio": 9.806325079676392e-05
+        },
+        "ENDOWMENT": {
+          "count": 7,
+          "ratio": 0.0003432213777886737
+        },
+        "FCP": {
+          "count": 162,
+          "ratio": 0.007943123314537876
+        },
+        "FGR": {
+          "count": 2,
+          "ratio": 9.806325079676392e-05
+        },
+        "FINANCE/MORTGAGE COMPANY": {
+          "count": 45,
+          "ratio": 0.002206423142927188
+        },
+        "FOUNDATION": {
+          "count": 28,
+          "ratio": 0.0013728855111546949
+        },
+        "FUND OF FUNDS": {
+          "count": 843,
+          "ratio": 0.04133366021083599
+        },
+        "FUTURES COMMISSION MERCHANT": {
+          "count": 3,
+          "ratio": 0.00014709487619514588
+        },
+        "GOVERNMENT AGENCY": {
+          "count": 149,
+          "ratio": 0.007305712184358912
+        },
+        "HEDGE FUND": {
+          "count": 1381,
+          "ratio": 0.06771267467516548
+        },
+        "ICVC": {
+          "count": 67,
+          "ratio": 0.0032851189016915913
+        },
+        "INDIVIDUAL": {
+          "count": 4,
+          "ratio": 0.00019612650159352783
+        },
+        "INSURANCE": {
+          "count": 16,
+          "ratio": 0.0007845060063741113
+        },
+        "INSURER": {
+          "count": 500,
+          "ratio": 0.024515812699190977
+        },
+        "INTERMEDIARY": {
+          "count": 80,
+          "ratio": 0.003922530031870556
+        },
+        "INTERNATIONAL ORGANIZATION": {
+          "count": 353,
+          "ratio": 0.01730816376562883
+        },
+        "INVESTMENT ADVISOR": {
+          "count": 1325,
+          "ratio": 0.0649669036528561
+        },
+        "INVESTMENT TRUST": {
+          "count": 81,
+          "ratio": 0.003971561657268938
+        },
+        "KVG": {
+          "count": 209,
+          "ratio": 0.010247609708261829
+        },
+        "LIMITED LIABILITY COMPANY (LLC)": {
+          "count": 13,
+          "ratio": 0.0006374111301789654
+        },
+        "LIMITED PARTNERSHIP (LP)": {
+          "count": 11,
+          "ratio": 0.0005393478793822015
+        },
+        "MONEY MANAGER": {
+          "count": 2018,
+          "ratio": 0.09894582005393479
+        },
+        "MONEY MANAGER CORPORATE": {
+          "count": 56,
+          "ratio": 0.0027457710223093897
+        },
+        "MUTUAL - 40 ACT": {
+          "count": 30,
+          "ratio": 0.0014709487619514587
+        },
+        "MUTUAL - CANADIAN": {
+          "count": 14,
+          "ratio": 0.0006864427555773474
+        },
+        "MUTUAL - CLOSED ENDED": {
+          "count": 404,
+          "ratio": 0.01980877666094631
+        },
+        "MUTUAL - ETF": {
+          "count": 36,
+          "ratio": 0.0017651385143417505
+        },
+        "MUTUAL FUND": {
+          "count": 4589,
+          "ratio": 0.2250061289531748
+        },
+        "NON-US BANK": {
+          "count": 931,
+          "ratio": 0.0456484432458936
+        },
+        "NON-US TRUST": {
+          "count": 35,
+          "ratio": 0.0017161068889433686
+        },
+        "OTHER NON-US FIDUCIARY VEHICLE": {
+          "count": 33,
+          "ratio": 0.0016180436381466046
+        },
+        "PARTNERSHIP": {
+          "count": 31,
+          "ratio": 0.0015199803873498406
+        },
+        "PENSION": {
+          "count": 561,
+          "ratio": 0.027506741848492278
+        },
+        "PENSION - CONTRIBUTION": {
+          "count": 57,
+          "ratio": 0.0027948026477077714
+        },
+        "PENSION - CORPORATION": {
+          "count": 122,
+          "ratio": 0.005981858298602599
+        },
+        "PENSION - DEFINED BENEFIT": {
+          "count": 15,
+          "ratio": 0.0007354743809757293
+        },
+        "PENSION - DUTCH": {
+          "count": 33,
+          "ratio": 0.0016180436381466046
+        },
+        "PENSION - ERISA": {
+          "count": 10,
+          "ratio": 0.0004903162539838195
+        },
+        "PENSION - PUBLIC": {
+          "count": 94,
+          "ratio": 0.004608972787447904
+        },
+        "PERSONAL HOLDING/INVESTMENT COMPANY": {
+          "count": 115,
+          "ratio": 0.005638636920813925
+        },
+        "POOLED FUND": {
+          "count": 27,
+          "ratio": 0.0013238538857563127
+        },
+        "PRIVATE CHARITY": {
+          "count": 9,
+          "ratio": 0.0004412846285854376
+        },
+        "PRIVATE EQUITY": {
+          "count": 71,
+          "ratio": 0.003481245403285119
+        },
+        "PRIVATE INVESTMENT COMPANY (PIC)": {
+          "count": 23,
+          "ratio": 0.001127727384162785
+        },
+        "PUBLIC CHARITY": {
+          "count": 5,
+          "ratio": 0.00024515812699190976
+        },
+        "REIT (REAL ESTATE INVESTMENT TRUST)": {
+          "count": 12,
+          "ratio": 0.0005883795047805835
+        },
+        "RETAIL": {
+          "count": 14,
+          "ratio": 0.0006864427555773474
+        },
+        "SICAV": {
+          "count": 515,
+          "ratio": 0.025251287080166707
+        },
+        "SICAV-SIF": {
+          "count": 35,
+          "ratio": 0.0017161068889433686
+        },
+        "SPECIAL PURPOSE VEHICLE (SPV)": {
+          "count": 350,
+          "ratio": 0.017161068889433684
+        },
+        "UCITS FUND": {
+          "count": 716,
+          "ratio": 0.03510664378524148
+        },
+        "UNIT TRUST": {
+          "count": 72,
+          "ratio": 0.003530277028683501
+        },
+        "US BANK": {
+          "count": 29,
+          "ratio": 0.0014219171365530768
+        },
+        "US TRUST": {
+          "count": 14,
+          "ratio": 0.0006864427555773474
+        }
+      },
+      "ratio": 0.37380179982038453
+    },
+    "LATAM": {
+      "count": 1121,
+      "client_type": {
+        "BROKER/DEALER": {
+          "count": 61,
+          "ratio": 0.054415700267618196
+        },
+        "CENTRAL BANK": {
+          "count": 19,
+          "ratio": 0.01694915254237288
+        },
+        "CLOSELY HELD NON-OPERATING COMPANY": {
+          "count": 1,
+          "ratio": 0.0008920606601248885
+        },
+        "COMMERCIAL CORPORATION": {
+          "count": 370,
+          "ratio": 0.33006244424620873
+        },
+        "COMMODITY SUBSIDIARY": {
+          "count": 1,
+          "ratio": 0.0008920606601248885
+        },
+        "COMMON INVESTMENT FUND": {
+          "count": 1,
+          "ratio": 0.0008920606601248885
+        },
+        "CORPORATE ACQUISITION VEHICLE": {
+          "count": 4,
+          "ratio": 0.003568242640499554
+        },
+        "CORPORATE JOINT VENTURE": {
+          "count": 1,
+          "ratio": 0.0008920606601248885
+        },
+        "FINANCE/MORTGAGE COMPANY": {
+          "count": 5,
+          "ratio": 0.0044603033006244425
+        },
+        "FUND OF FUNDS": {
+          "count": 173,
+          "ratio": 0.1543264942016057
+        },
+        "GOVERNMENT AGENCY": {
+          "count": 16,
+          "ratio": 0.014272970561998216
+        },
+        "HEDGE FUND": {
+          "count": 62,
+          "ratio": 0.05530776092774309
+        },
+        "INDIVIDUAL": {
+          "count": 1,
+          "ratio": 0.0008920606601248885
+        },
+        "INSURER": {
+          "count": 50,
+          "ratio": 0.04460303300624442
+        },
+        "INTERNATIONAL ORGANIZATION": {
+          "count": 2,
+          "ratio": 0.001784121320249777
+        },
+        "INVESTMENT ADVISOR": {
+          "count": 79,
+          "ratio": 0.0704727921498662
+        },
+        "INVESTMENT TRUST": {
+          "count": 4,
+          "ratio": 0.003568242640499554
+        },
+        "LIMITED LIABILITY COMPANY (LLC)": {
+          "count": 1,
+          "ratio": 0.0008920606601248885
+        },
+        "MONEY MANAGER": {
+          "count": 15,
+          "ratio": 0.013380909901873328
+        },
+        "MUTUAL FUND": {
+          "count": 12,
+          "ratio": 0.010704727921498661
+        },
+        "NON-US BANK": {
+          "count": 192,
+          "ratio": 0.17127564674397858
+        },
+        "NON-US TRUST": {
+          "count": 1,
+          "ratio": 0.0008920606601248885
+        },
+        "OTHER NON-US FIDUCIARY VEHICLE": {
+          "count": 7,
+          "ratio": 0.006244424620874219
+        },
+        "PENSION": {
+          "count": 11,
+          "ratio": 0.009812667261373774
+        },
+        "PENSION - CONTRIBUTION": {
+          "count": 6,
+          "ratio": 0.0053523639607493305
+        },
+        "PENSION - CORPORATION": {
+          "count": 3,
+          "ratio": 0.0026761819803746653
+        },
+        "PENSION - PUBLIC": {
+          "count": 7,
+          "ratio": 0.006244424620874219
+        },
+        "PERSONAL HOLDING/INVESTMENT COMPANY": {
+          "count": 2,
+          "ratio": 0.001784121320249777
+        },
+        "PRIVATE INVESTMENT COMPANY (PIC)": {
+          "count": 2,
+          "ratio": 0.001784121320249777
+        },
+        "RETAIL": {
+          "count": 1,
+          "ratio": 0.0008920606601248885
+        },
+        "SPECIAL PURPOSE VEHICLE (SPV)": {
+          "count": 5,
+          "ratio": 0.0044603033006244425
+        },
+        "US BANK": {
+          "count": 2,
+          "ratio": 0.001784121320249777
+        },
+        "US TRUST": {
+          "count": 4,
+          "ratio": 0.003568242640499554
+        }
+      },
+      "ratio": 0.020545811110500176
+    },
+    "NAM": {
+      "count": 27975,
+      "client_type": {
+        "BROKER/DEALER": {
+          "count": 862,
+          "ratio": 0.030813226094727437
+        },
+        "CENTRAL BANK": {
+          "count": 65,
+          "ratio": 0.002323503127792672
+        },
+        "CLOSELY HELD NON-OPERATING COMPANY": {
+          "count": 32,
+          "ratio": 0.0011438784629133154
+        },
+        "COMMERCIAL CORPORATION": {
+          "count": 3981,
+          "ratio": 0.14230563002680965
+        },
+        "COMMINGLED FUND": {
+          "count": 33,
+          "ratio": 0.0011796246648793566
+        },
+        "COMMODITY SUBSIDIARY": {
+          "count": 9,
+          "ratio": 0.00032171581769437
+        },
+        "COMMON INVESTMENT FUND": {
+          "count": 21,
+          "ratio": 0.0007506702412868633
+        },
+        "CORPORATE ACQUISITION VEHICLE": {
+          "count": 3,
+          "ratio": 0.00010723860589812332
+        },
+        "CREDIT UNION/THRIFT": {
+          "count": 5,
+          "ratio": 0.00017873100983020553
+        },
+        "CURRENCY DEALER/EXCHANGE/MONEY REMITTER": {
+          "count": 10,
+          "ratio": 0.00035746201966041106
+        },
+        "DEFINED BENEFIT PLAN": {
+          "count": 30,
+          "ratio": 0.0010723860589812334
+        },
+        "EDUCATIONAL": {
+          "count": 23,
+          "ratio": 0.0008221626452189455
+        },
+        "ENDOWMENT": {
+          "count": 72,
+          "ratio": 0.00257372654155496
+        },
+        "FCP": {
+          "count": 5,
+          "ratio": 0.00017873100983020553
+        },
+        "FINANCE/MORTGAGE COMPANY": {
+          "count": 153,
+          "ratio": 0.00546916890080429
+        },
+        "FOUNDATION": {
+          "count": 78,
+          "ratio": 0.0027882037533512065
+        },
+        "FUND OF FUNDS": {
+          "count": 126,
+          "ratio": 0.00450402144772118
+        },
+        "FUTURES COMMISSION MERCHANT": {
+          "count": 25,
+          "ratio": 0.0008936550491510277
+        },
+        "GOVERNMENT AGENCY": {
+          "count": 212,
+          "ratio": 0.007578194816800715
+        },
+        "HEDGE FUND": {
+          "count": 5809,
+          "ratio": 0.2076496872207328
+        },
+        "ICVC": {
+          "count": 10,
+          "ratio": 0.00035746201966041106
+        },
+        "INDIVIDUAL": {
+          "count": 70,
+          "ratio": 0.0025022341376228774
+        },
+        "INSURANCE": {
+          "count": 113,
+          "ratio": 0.004039320822162645
+        },
+        "INSURER": {
+          "count": 576,
+          "ratio": 0.02058981233243968
+        },
+        "INTERMEDIARY": {
+          "count": 13,
+          "ratio": 0.0004647006255585344
+        },
+        "INTERNATIONAL ORGANIZATION": {
+          "count": 27,
+          "ratio": 0.00096514745308311
+        },
+        "INVESTMENT ADVISOR": {
+          "count": 2998,
+          "ratio": 0.10716711349419124
+        },
+        "INVESTMENT TRUST": {
+          "count": 227,
+          "ratio": 0.008114387846291331
+        },
+        "KVG": {
+          "count": 34,
+          "ratio": 0.0012153708668453977
+        },
+        "LIMITED LIABILITY COMPANY (LLC)": {
+          "count": 14,
+          "ratio": 0.0005004468275245755
+        },
+        "LIMITED PARTNERSHIP (LP)": {
+          "count": 7,
+          "ratio": 0.00025022341376228777
+        },
+        "MONEY MANAGER": {
+          "count": 1721,
+          "ratio": 0.06151921358355675
+        },
+        "MONEY MANAGER CORPORATE": {
+          "count": 28,
+          "ratio": 0.001000893655049151
+        },
+        "MUTUAL - 40 ACT": {
+          "count": 994,
+          "ratio": 0.03553172475424486
+        },
+        "MUTUAL - CANADIAN": {
+          "count": 330,
+          "ratio": 0.011796246648793566
+        },
+        "MUTUAL - CLOSED ENDED": {
+          "count": 183,
+          "ratio": 0.0065415549597855225
+        },
+        "MUTUAL - ETF": {
+          "count": 230,
+          "ratio": 0.008221626452189455
+        },
+        "MUTUAL FUND": {
+          "count": 3917,
+          "ratio": 0.14001787310098301
+        },
+        "NON-FOR PROFIT": {
+          "count": 30,
+          "ratio": 0.0010723860589812334
+        },
+        "NON-US BANK": {
+          "count": 310,
+          "ratio": 0.011081322609472744
+        },
+        "NON-US TRUST": {
+          "count": 171,
+          "ratio": 0.006112600536193029
+        },
+        "OTHER NON-US FIDUCIARY VEHICLE": {
+          "count": 34,
+          "ratio": 0.0012153708668453977
+        },
+        "PARTNERSHIP": {
+          "count": 240,
+          "ratio": 0.008579088471849867
+        },
+        "PENSION": {
+          "count": 860,
+          "ratio": 0.03074173369079535
+        },
+        "PENSION - CONTRIBUTION": {
+          "count": 95,
+          "ratio": 0.0033958891867739054
+        },
+        "PENSION - CORPORATION": {
+          "count": 165,
+          "ratio": 0.005898123324396783
+        },
+        "PENSION - DEFINED BENEFIT": {
+          "count": 186,
+          "ratio": 0.006648793565683646
+        },
+        "PENSION - DUTCH": {
+          "count": 14,
+          "ratio": 0.0005004468275245755
+        },
+        "PENSION - ERISA": {
+          "count": 147,
+          "ratio": 0.005254691689008043
+        },
+        "PENSION - PUBLIC": {
+          "count": 197,
+          "ratio": 0.007042001787310098
+        },
+        "PERSONAL HOLDING/INVESTMENT COMPANY": {
+          "count": 184,
+          "ratio": 0.006577301161751564
+        },
+        "POOLED FUND": {
+          "count": 72,
+          "ratio": 0.00257372654155496
+        },
+        "PRIVATE CHARITY": {
+          "count": 6,
+          "ratio": 0.00021447721179624664
+        },
+        "PRIVATE EQUITY": {
+          "count": 212,
+          "ratio": 0.007578194816800715
+        },
+        "PRIVATE INVESTMENT COMPANY (PIC)": {
+          "count": 14,
+          "ratio": 0.0005004468275245755
+        },
+        "PUBLIC CHARITY": {
+          "count": 3,
+          "ratio": 0.00010723860589812332
+        },
+        "REIT (REAL ESTATE INVESTMENT TRUST)": {
+          "count": 120,
+          "ratio": 0.004289544235924933
+        },
+        "RELIGIOUS": {
+          "count": 8,
+          "ratio": 0.00028596961572832885
+        },
+        "RETAIL": {
+          "count": 4,
+          "ratio": 0.00014298480786416443
+        },
+        "SICAV": {
+          "count": 194,
+          "ratio": 0.006934763181411975
+        },
+        "SICAV-SIF": {
+          "count": 2,
+          "ratio": 7.149240393208221e-05
+        },
+        "SPECIAL PURPOSE VEHICLE (SPV)": {
+          "count": 263,
+          "ratio": 0.00940125111706881
+        },
+        "TAFT HARTLEY": {
+          "count": 1,
+          "ratio": 3.5746201966041106e-05
+        },
+        "TENDER OPTION BONDS": {
+          "count": 226,
+          "ratio": 0.00807864164432529
+        },
+        "UCITS FUND": {
+          "count": 376,
+          "ratio": 0.013440571939231457
+        },
+        "UNIT TRUST": {
+          "count": 158,
+          "ratio": 0.005647899910634495
+        },
+        "US BANK": {
+          "count": 268,
+          "ratio": 0.009579982126899016
+        },
+        "US TRUST": {
+          "count": 365,
+          "ratio": 0.013047363717605004
+        },
+        "VENTURE CAPITAL": {
+          "count": 4,
+          "ratio": 0.00014298480786416443
+        }
+      },
+      "ratio": 0.5127288722714026
+    }
+  },
+  "count": 54561,
+  "ratio": 1.0
+}

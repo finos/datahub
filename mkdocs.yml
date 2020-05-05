@@ -1,0 +1,29 @@
+docs_dir: datahub_core
+pages:
+- Home: index.md
+- DataFrame Generation:
+  - Address: ./docs/dataframe/address.md
+  - Choice: ./docs/dataframe/choice.md
+  - Counter: ./docs/dataframe/counter.md
+  - Company Namer: ./docs/dataframe/company_namer.md
+  - Counter: ./docs/dataframe/counter.md
+  - Country Coides: ./docs/dataframe/country_codes.md
+  - Industry Codes - SIC Range: ./docs/dataframe/sic_range.md
+  - Industry Codes - SIC Industry: ./docs/dataframe/sic_industry.md
+  - Person: ./docs/dataframe/person.md
+  - Random Range Sampler: ./docs/dataframe/random_range.md
+  - Normal Sampler: ./docs/dataframe/normal_sampler.md
+  - SOE ID: ./docs/dataframe/soe_id.md
+- Data Sets:
+  - Get Regions: ./docs/data/regions.md
+  - Get Countries: ./docs/data/countries.md
+- Data Types:
+  - Address: ./docs/datasets/address.md
+  - Country: ./docs/datasets/country.md
+  - LEI: ./docs/datasets/lei.md
+  - Person: ./docs/datasets/person.md
+  - SicCode: ./docs/datasets/sic_code.md
+  - SicRange: ./docs/datasets/sic_range.md
+site_dir: .build/site
+site_name: Datahub Documentation
+theme: ivory

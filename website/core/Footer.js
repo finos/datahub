@@ -109,6 +109,13 @@ class Footer extends React.Component {
                 </a>
               </div>
             )}
+            <div className="social">
+              <a
+                href={`https://www.linkedin.com/company/finosfoundation`}
+                className="linkedin-button">
+                FINOS on LinkedIN
+              </a>
+            </div>
           </div>
         </section>
         <section className="finos finosBanner">

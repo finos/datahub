@@ -1,0 +1,94 @@
+site_name: "Datahub Documentation"
+
+# This tells pydocmd which pages to generate from which Python modules,
+# functions and classes. At the first level is the page name, below that
+# is a tree of Python member names (modules, classes, etc.) that should be
+# documented. Higher indentation leads to smaller header size.
+generate:
+    - docs/dataframe/readme.md:
+        - datahub_core.generators.data_frame++
+    - docs/dataframe/address.md:
+        - datahub_core.generators.address
+    - docs/dataframe/choice.md:
+        - datahub_core.generators.choice
+    - docs/dataframe/company_namer.md:
+        - datahub_core.generators.company_namer
+    - docs/dataframe/counter.md:
+        - datahub_core.generators.counter
+    - docs/dataframe/country_codes.md:
+        - datahub_core.generators.country_codes
+    - docs/dataframe/sic_range.md:
+        - datahub_core.generators.sic_range
+    - docs/dataframe/sic_industry.md:
+        - datahub_core.generators.sic_industry
+    - docs/dataframe/person.md:
+        - datahub_core.generators.person
+    - docs/dataframe/random_range.md:
+        - datahub_core.generators.random_range
+    - docs/dataframe/normal_sampler.md:
+        - datahub_core.generators.normal_sampler
+    - docs/dataframe/soe_id.md:
+        - datahub_core.generators.soe_id
+    - docs/data/regions.md:
+        - datahub_core.data.regions
+    - docs/data/countries.md:
+        - datahub_core.data.countries
+
+    - docs/datasets/address.md:
+        - datahub_core.datasets.Address++
+    - docs/datasets/country.md:
+        - datahub_core.datasets.Country++
+    - docs/datasets/lei.md:
+        - datahub_core.datasets.LEI++
+    - docs/datasets/person.md:
+        - datahub_core.datasets.Person++
+    - docs/datasets/sic_code.md:
+        - datahub_core.datasets.SicCode++
+    - docs/datasets/sic_range.md:
+        - datahub_core.datasets.SicRange++
+
+
+# MkDocs pages configuration. The `<<` operator is sugar added by pydocmd
+# that allows you to use an external Markdown file (eg. your project's README)
+# in the documentation. The path must be relative to current working directory.
+pages:
+    - Home: index.md << ./README.md
+    - DataFrame Generation:
+        - Address: ./docs/dataframe/address.md
+        - Choice: ./docs/dataframe/choice.md
+        - Counter: ./docs/dataframe/counter.md
+        - Company Namer: ./docs/dataframe/company_namer.md
+        - Counter: ./docs/dataframe/counter.md
+        - Country Coides: ./docs/dataframe/country_codes.md
+        - Industry Codes - SIC Range: ./docs/dataframe/sic_range.md
+        - Industry Codes - SIC Industry: ./docs/dataframe/sic_industry.md
+        - Person: ./docs/dataframe/person.md
+        - Random Range Sampler: ./docs/dataframe/random_range.md
+        - Normal Sampler: ./docs/dataframe/normal_sampler.md
+        - SOE ID: ./docs/dataframe/soe_id.md
+
+    - Data Sets:
+        - Get Regions: ./docs/data/regions.md
+        - Get Countries: ./docs/data/countries.md
+    - Data Types:
+        - Address: ./docs/datasets/address.md
+        - Country: ./docs/datasets/country.md
+        - LEI: ./docs/datasets/lei.md
+        - Person: ./docs/datasets/person.md
+        - SicCode: ./docs/datasets/sic_code.md
+        - SicRange: ./docs/datasets/sic_range.md
+
+
+
+# These options all show off their default values. You don't have to add
+# them to your configuration if you're fine with the default.
+docs_dir: sources
+gens_dir: datahub_core
+site_dir: .build/site
+loader:   pydocmd.loader.PythonLoader
+preprocessor: pydocmd.preprocessor.Preprocessor
+theme: ivory
+headers: markdown
+
+additional_search_paths:
+- ..
