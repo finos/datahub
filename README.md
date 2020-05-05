@@ -1,4 +1,6 @@
 [![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg)](https://finosfoundation.atlassian.net/wiki/display/FINOS/Incubating)
+![databub-build](https://github.com/finos/datahub/workflows/databub-build/badge.svg)
+![website build](https://github.com/finos/datahub/workflows/Docusaurus-website-build/badge.svg)
 
 # DataHub
 

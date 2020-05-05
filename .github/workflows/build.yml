@@ -29,7 +29,7 @@ on:
       - '.github/workflows/build.yml'
 
 jobs:
-  website-build:
+  datahub-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
