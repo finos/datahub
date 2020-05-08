@@ -1,5 +1,16 @@
 {
-  "Main Menu": {
-    "Main Menu": ["home", "team", "roadmap", "contributing"]
+  "docs": {
+    "Guide": ["home", "developer", "team", "roadmap", "contributing"],
+    "API Reference": [
+      {
+        "type": "subcategory",
+        "label": "data",
+        "ids": [
+          "data/countries",
+          "data/regions"
+        ]
+      }
+    ]
+
   }
 }

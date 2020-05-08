@@ -7,8 +7,6 @@ site_name: "Datahub Documentation"
 generate:
     - docs/dataframe/readme.md:
         - datahub_core.generators.data_frame++
-    - docs/object_decorators/synthetic_attributes.md:
-        - datahub_core.generators.synthetic_attributes
     - docs/dataframe/address.md:
         - datahub_core.generators.address
     - docs/dataframe/choice.md:
@@ -78,8 +76,6 @@ pages:
         - Person: ./docs/datasets/person.md
         - SicCode: ./docs/datasets/sic_code.md
         - SicRange: ./docs/datasets/sic_range.md
-    - Object Decorators:
-        - Synthetic Attributes: ./docs/object_decorators/synthetic_attributes.md
 
 
 
