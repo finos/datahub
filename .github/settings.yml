@@ -3,19 +3,19 @@
 # Docs on https://github.com/probot/settings
 
 repository:
-    name: datahub
-    description: DataHub - Synthetic data library
-    homepage: DataHub - Synthetic data library
-    topics: data, synthetic, python, library, pandas, sklearn
-    private: true
-    has_issues: true
-    has_projects: false
-    has_wiki: false
-    has_downloads: false
-    default_branch: master
-    allow_squash_merge: true
-    allow_merge_commit: true
-    allow_rebase_merge: false
+  name: datahub
+  description: DataHub - Synthetic data library
+  homepage: DataHub - Synthetic data library
+  topics: data, synthetic, python, library, pandas, sklearn
+  private: true
+  has_issues: true
+  has_projects: false
+  has_wiki: false
+  has_downloads: false
+  default_branch: master
+  allow_squash_merge: true
+  allow_merge_commit: true
+  allow_rebase_merge: false
   
   labels:
     - name: bug
