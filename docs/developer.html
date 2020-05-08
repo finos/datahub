@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Developer Guide · DataHub</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The following guide give you a deeper dive about the structure of DataHubsource code and its design philosophy, and explain how to customize DataHubCore by adding your own generator."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Developer Guide · DataHub"/><meta property="og:type" content="website"/><meta property="og:url" content="https://datahub.finos.org/"/><meta property="og:description" content="The following guide give you a deeper dive about the structure of DataHubsource code and its design philosophy, and explain how to customize DataHubCore by adding your own generator."/><meta property="og:image" content="https://datahub.finos.org/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://datahub.finos.org/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon/favicon-finos.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/favicon/favicon-finos.ico" alt="DataHub"/><h2 class="headerTitleWithLogo">DataHub</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/home" target="_self">Docs</a></li><li class=""><a href="/docs/roadmap" target="_self">Roadmap</a></li><li class=""><a href="/docs/team" target="_self">Team</a></li><li class=""><a href="https://github.com/finos/databub" target="_self">GitHub</a></li><li class=""><a target="_self"></a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Developer Guide</h1></header><article><div><span><p>The following guide give you a deeper dive about the structure of DataHubsource code and its design philosophy, and explain how to customize DataHubCore by adding your own generator.</p>
+<h1><a class="anchor" aria-hidden="true" id="source-code-structuresource-code-strcture"></a><a href="#source-code-structuresource-code-strcture" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="#source-code-strcture">Source code structure</a></h1>
+<h1><a class="anchor" aria-hidden="true" id="setup-local-development-environmentsetup-local-development-environment"></a><a href="#setup-local-development-environmentsetup-local-development-environment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="#setup-local-development-environment">Setup local development environment</a></h1>
+<h1><a class="anchor" aria-hidden="true" id="add-your-own-generatoradd-your-own-generator"></a><a href="#add-your-own-generatoradd-your-own-generator" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="#add-your-own-generator">Add your own generator</a></h1>
+<h1><a class="anchor" aria-hidden="true" id="add-your-own-modeladd-your-own-model"></a><a href="#add-your-own-modeladd-your-own-model" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="#add-your-own-model">Add your own model</a></h1>
+<h2><a class="anchor" aria-hidden="true" id="a-namesource-code-strctureasource-code-structure"></a><a href="#a-namesource-code-strctureasource-code-structure" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a name="source-code-strcture"></a>Source code structure</h2>
+<p>The major functionality of DataHubcore sits in the folder datahub_core with the following structure:</p>
+<pre><code class="hljs css language-bash">├── data/
+├── datasets/
+├── generators/
+│   ├── attribute_generators/
+│   ├── data_frame/
+│   ├── generate.py
+│   ├── ...
+├── libs/
+├── models
+│   ├── markov/
+│   ├── sklearn/
+├── ...
+</code></pre>
+<ul>
+<li><strong>data</strong>: This folder contains all the data required by different generators.</li>
+<li><strong>dataset</strong>: This folder contains all the model definition for different generators.</li>
+<li><strong>generators</strong>: This folder contains the generators to generate different kind of synthetic data.</li>
+<li><strong>libs</strong>: This folder contains some shared dependency.</li>
+<li><strong>models</strong>: This folder contains different data models, based on which DataHubcan generate synthetic data. It's an enhanced functionality to stand alone data generators. For now, we only support two models: markov and sklearn.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="a-namesetup-local-development-environmentasetup-local-development-environment"></a><a href="#a-namesetup-local-development-environmentasetup-local-development-environment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a name="setup-local-development-environment"></a>Setup local development environment</h2>
+<ol>
+<li>Setup pip.ini to enable downloading packages via company proxy(optional)</li>
+<li>Install dependencies</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="setup-the-pipini"></a><a href="#setup-the-pipini" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setup the PIP.ini</h3>
+<p>If you are working behind a corporate firewall you may have a pypi mirror or
+need to configure pip with your corporate firewall's settings. There are many resources
+on stackoverflow how do to this - but essentially you need to set the index and index-url
+to whatever you have setup internally</p>
+<h3><a class="anchor" aria-hidden="true" id="configuring-pip-to-use-an-internal-mirror"></a><a href="#configuring-pip-to-use-an-internal-mirror" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuring pip to use an internal mirror</h3>
+<hr>
+<p>Place the following file @ %APPDATA%\pip\pip.ini</p>
+<pre><code class="hljs css language-shellS">[list]
+<span class="hljs-keyword">format</span>=<span class="hljs-keyword">columns</span>
+
+[<span class="hljs-keyword">global</span>]
+<span class="hljs-keyword">trusted</span>-host = www.your-<span class="hljs-type">internal</span>-repository.net
+<span class="hljs-keyword">index</span>-url = https://&lt;<span class="hljs-keyword">user</span>-<span class="hljs-type">name</span>&gt;:&lt;<span class="hljs-keyword">password</span>&gt;@www.your-<span class="hljs-type">internal</span>-repository.net/pypi/simple
+<span class="hljs-keyword">index</span> = https://&lt;soe-id&gt;:&lt;<span class="hljs-keyword">user</span>-<span class="hljs-type">name</span>&gt;@ www.your-<span class="hljs-type">internal</span>-repository.net/pypi-dev
+<span class="hljs-keyword">disable</span>-pip-<span class="hljs-keyword">version</span>-<span class="hljs-keyword">check</span> = <span class="hljs-keyword">True</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="configuring-pip-to-use-a-proxy"></a><a href="#configuring-pip-to-use-a-proxy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuring pip to use a proxy</h3>
+<hr>
+<p>Place the following file @ %APPDATA%\pip\pip.ini</p>
+<pre><code class="hljs css language-shellS"><span class="hljs-section">[list]</span>
+<span class="hljs-attr">format</span>=columns
+
+<span class="hljs-section">[global]</span>
+
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="create-a-python-virtual-env"></a><a href="#create-a-python-virtual-env" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a python Virtual Env</h3>
+<pre><code class="hljs css language-shell">  python3 -m venv env
+  .env/scripts/Activate.bat
+</code></pre>
+<p>Install dependencie via PIP</p>
+<pre><code class="hljs css language-shell">  pip install -r requirements.txt
+</code></pre>
+<p>Running the tests to check everything is ok</p>
+<pre><code class="hljs css language-shell">  pytest
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="a-nameadd-your-own-generatoraadd-your-own-generator"></a><a href="#a-nameadd-your-own-generatoraadd-your-own-generator" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a name="add-your-own-generator"></a>Add your own generator</h2>
+<p>A DataHubgenerator is the key component for you to generate synthetic data based on predfined logic. Adding a new generator to DataHubis relative simple and consists of two pieces: functional wrapper and generation logic.</p>
+<h3><a class="anchor" aria-hidden="true" id="functional-wrapper"></a><a href="#functional-wrapper" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Functional wrapper:</h3>
+<p>The functional wrapper of a generator provide a function which will return a function pointer with partial parameters assgined to it. You can use the below template with some pseudocode.</p>
+<pre><code class="hljs css language-python"><span class="hljs-keyword">import</span> functools
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">generator_name</span><span class="hljs-params">(data, param1=None, param2=None, ...)</span>:</span>
+    <span class="hljs-string">"""
+
+    Embedded document here
+
+    # Arguments:
+
+    # Example:
+
+    """</span>
+    <span class="hljs-keyword">return</span> functools.partial(
+        __generator_name,
+        data=data,
+        param1=param1,
+        param2=param2,
+        ...
+    )
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__generator_name</span><span class="hljs-params">(data, param1=None, param2=None, ...)</span>:</span>
+    <span class="hljs-string">"""
+
+    Real generation logic, and you only need to return a single item from this function.
+
+    It's recommended to wrap your generation logic to a seperate attribute generator.
+
+    # Example:
+    def __generator_name(data, param1=None, param2=None, ...):
+        generator = AttributeGenerator(...)
+        return generator.make(...)
+
+    """</span>
+    <span class="hljs-keyword">return</span> synthetic_item
+</code></pre>
+<p>After you create your own generator wrapper, you can put it under folder <strong>datahub_core/generator</strong>.</p>
+<h3><a class="anchor" aria-hidden="true" id="attribute-generator"></a><a href="#attribute-generator" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Attribute generator:</h3>
+<p>As mentioned in above section, the recommended practice is to split your generation logic into a seperated attribute generator. You can use below template with pseudocode as an example.</p>
+<pre><code class="hljs css language-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">YourAttributeGenerator</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, ...)</span>:</span>
+        ...
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">make</span><span class="hljs-params">(self, ...)</span>:</span>
+        <span class="hljs-string">"""
+
+        Real generation logic here.
+        
+        """</span>
+        <span class="hljs-keyword">return</span> synthetic_item
+</code></pre>
+<p>The file naming convension for attribute generator is <strong>your_attribute_name</strong>_generator.py, and place that file under folder <strong>datahub_core/generators/attribute_generators</strong>.</p>
+<h2><a class="anchor" aria-hidden="true" id="a-nameadd-your-own-modelaadd-your-own-model"></a><a href="#a-nameadd-your-own-modelaadd-your-own-model" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a name="add-your-own-model"></a>Add your own model</h2>
+<p>A DataHubmodel is an advanced way to generate your synthetic data based on some statistic features of your input data or some predefined relations between different columns compared to the relative simple way to generate synthetic data based on a single generator.</p>
+<p>The way to define a new model is relatively simple, please refer to the below template with pseudocode.</p>
+<pre><code class="hljs css language-python"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">YourModel</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, filename, xfields, yfields)</span>:</span>
+        ...
+
+    <span class="hljs-comment"># optional</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_precondition</span><span class="hljs-params">(self, data)</span>:</span>
+        ...
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">make_one</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> synthetic_item
+</code></pre>
+<p>The model also has a relative simple interface, and you only need to return a single item from <em>make_one</em> interface. The <em>set_precondition</em> interface is optional, and only need to implement when your model has any dependent data.</p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#a-namesource-code-strctureasource-code-structure"><a name="source-code-strcture"></a>Source code structure</a></li><li><a href="#a-namesetup-local-development-environmentasetup-local-development-environment"><a name="setup-local-development-environment"></a>Setup local development environment</a><ul class="toc-headings"><li><a href="#setup-the-pipini">Setup the PIP.ini</a></li><li><a href="#configuring-pip-to-use-an-internal-mirror">Configuring pip to use an internal mirror</a></li><li><a href="#configuring-pip-to-use-a-proxy">Configuring pip to use a proxy</a></li><li><a href="#create-a-python-virtual-env">Create a python Virtual Env</a></li></ul></li><li><a href="#a-nameadd-your-own-generatoraadd-your-own-generator"><a name="add-your-own-generator"></a>Add your own generator</a><ul class="toc-headings"><li><a href="#functional-wrapper">Functional wrapper:</a></li><li><a href="#attribute-generator">Attribute generator:</a></li></ul></li><li><a href="#a-nameadd-your-own-modelaadd-your-own-model"><a name="add-your-own-model"></a>Add your own model</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon/favicon-finos.ico" alt="DataHub"/></a><div><h5>Docs</h5><a href="/docs/">Getting Started</a><a href="/docs/">Why Project Blueprint</a><a href="/docs/">Use Cases</a></div><div><h5>Community</h5><a href="https://www.finos.org/" target="_blank" rel="noreferrer noopener">FINOS</a><a href="https://www.finos.org/" target="_blank" rel="noreferrer noopener">Project Blueprint Wiki</a><a href="https://www.finos.org/" target="_blank" rel="noreferrer noopener">Google Groups</a></div><div><h5>More</h5><div class="social"><a class="github-button" href="https://github.com/finos/datahub" data-count-href="https://github.com/finos/datahub/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">datahub</a></div><div class="social"><a href="https://twitter.com/FinosFoundation" class="twitter-follow-button">Follow @FinosFoundation</a></div><div class="social"><a href="https://www.linkedin.com/company/finosfoundation" class="linkedin-button">FINOS on LinkedIN</a></div></div></section><section class="finos finosBanner"><a href="https://www.finos.org"><img id="finosicon" src="img/finos_wordmark.svg" height="75px" alt="FINOS" title="FINOS"/><h2 id="proud">Proud member of the Fintech Open Source Foundation</h2></a></section><section class="copyright">Copyright © 2020 DataHub - Citi</section></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
