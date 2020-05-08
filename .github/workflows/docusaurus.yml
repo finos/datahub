@@ -47,6 +47,8 @@ jobs:
     - name: Build Website
       run: |
         curl ${{ env.CONTRIBUTE_SCRIPT_URL }} |  bash -s
+        # TODO - generate docs/ contents (should be also in .gitignore) from Python code docs, ie using pydocmd
+        # pydocmd ....
         # TODO - run https://pypi.org/project/pydoc-markdown/ to generate MD contents from code docs
         npm run build --prefix website
     - name: Publish Website
