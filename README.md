@@ -20,7 +20,7 @@ Thanks To and the full dependency list.
 
 1. For information on how to get started with DataHub see our [Getting Started Guide](docs/GettingStarted.md)
 2. For more technical information about DataHub and how to customize it, see the [Developer Guide](docs/DeveloperGuide.md)
-3. For a high level road map see [Raod Map](docs/Roadmap.md)
+3. For a high level road map see [Raod Map](docs/roadmap.md)
 
 ## Overview of Synthetic data
 
