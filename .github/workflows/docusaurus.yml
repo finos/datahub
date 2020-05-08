@@ -34,7 +34,7 @@ jobs:
     - name: Install Node
       uses: actions/setup-node@v1
     - name: Install dependencies
-    run: python -m pip install -r requirements.txt
+      run: python -m pip install -r requirements.txt
     - name: Install Website deps
       run: npm install --prefix website
     - name: Patch forked version
