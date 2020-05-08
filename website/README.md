@@ -24,6 +24,19 @@ $ yarn
 $ yarn start
 ```
 
+# Integrate with pydocmd
+
+1. Make sure you are at the root directory of this repository, and run:
+```sh
+$ python3 -m pip install -r requirements.txt
+$ pydocmd build
+$ python3 doc_build.py
+```
+After above command, the generated document from pydocmd will be converted(adding id/title to the md file) and move to the root docs folder.
+
+2. Build and host your website according to previous section.
+
+
 ## Directory Structure
 
 Your project file structure should look something like this
