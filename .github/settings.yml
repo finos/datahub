@@ -45,9 +45,9 @@ repository:
           dismissal_restrictions:
         required_status_checks:
           strict: true
-          contexts: [ "cla-bot" ]
+          contexts: [ "verification/cla-signed" ]
         enforce_admins: true
         restrictions:
           apps: []
           users: []
-          teams: [finos/datahub]
+          teams: [ "finos/datahub" ]
