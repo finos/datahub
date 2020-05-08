@@ -1,4 +1,6 @@
+
 # These settings are synced to GitHub by https://probot.github.io/apps/settings/
+# Docs on https://github.com/probot/settings
 
 repository:
     name: datahub
