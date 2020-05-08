@@ -19,7 +19,7 @@ will persist data.
 
 The core library will however remain as vanilla and un-opinionated as possible.
 
-Many of the features of datahub are drawn from existing python libraies dedicated
+Many of the features of datahub are drawn from existing python libraries dedicated
 to some facet of synthetic generation - Datahub while offering a lot of it's
 own functionality directly pulls in other libraries where applicable.
 
