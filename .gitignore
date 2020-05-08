@@ -5,6 +5,13 @@
 .build
 env
 
+datahub_core/docs/
+datahub_core/**/*.md
+
+docs/data
+docs/dataframe
+docs/datasets
+docs/object_decorators
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

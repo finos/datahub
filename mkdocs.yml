@@ -24,6 +24,8 @@ pages:
   - Person: ./docs/datasets/person.md
   - SicCode: ./docs/datasets/sic_code.md
   - SicRange: ./docs/datasets/sic_range.md
+- Object Decorators:
+  - Synthetic Attributes: ./docs/object_decorators/synthetic_attributes.md
 site_dir: .build/site
 site_name: Datahub Documentation
 theme: ivory

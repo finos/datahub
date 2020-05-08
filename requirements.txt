@@ -2,7 +2,7 @@ mkdocs
 mkdocs-ivory
 numpy
 pandas
-pydoc-markdown
+pydoc-markdown==2.0.5
 pylint
 pytest
 scipy
