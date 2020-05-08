@@ -1,41 +1,38 @@
 This website was created with [Docusaurus](https://docusaurus.io/).
 
-# What's In This Document
-
-- [Get Started in 5 Minutes](#get-started-in-5-minutes)
-- [Directory Structure](#directory-structure)
-- [Editing Content](#editing-content)
-- [Adding Content](#adding-content)
-- [Full Documentation](#full-documentation)
-
 # Get Started in 5 Minutes
 
-1. Make sure all the dependencies for the website are installed:
-
+1. Ensure NodeJS is installed
 ```sh
-# Install dependencies
-$ yarn
+$ node -v
+$ npm -v
 ```
 
-2. Run your dev server:
-
+2. Ensure Python 3.7.x is installed
 ```sh
-# Start the site
-$ yarn start
+$ python --version
 ```
 
-# Integrate with pydocmd
+3. Install and run Docusaurus locally
 
-1. Make sure you are at the root directory of this repository, and run:
 ```sh
-$ python3 -m pip install -r requirements.txt
-$ pydocmd build
-$ python3 doc_build.py
+git clone git@github.com:<your fork>/datahub.git
+cd datahub
+
+# Download dependencies
+yarn --cwd website install
+
+# Generate contributing.md page
+./scripts/build-contribute-page.sh
+
+# Generate python docs (using pydocmd)
+python -m pip install -r requirements.txt
+pydocmd build
+python doc_build.py
+
+yarn --cwd website start
 ```
-After above command, the generated document from pydocmd will be converted(adding id/title to the md file) and move to the root docs folder.
-
-2. Build and host your website according to previous section.
-
+This will open a browser on http://localhost:3300
 
 ## Directory Structure
 
