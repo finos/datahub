@@ -1,11 +1,15 @@
 <H1>DataHub</H1> 
 
-![DataHub logo](docs/logo.png) __Synthetic data generation__
+![DataHub logo](docs/logo.png) 
+_Synthetic data generation_
 
 DataHub is a set of python libraries dedicated to the production of synthetic data to be used in tests, machine learning training, statistical analysis, and other use cases https://en.wikipedia.org/wiki/Synthetic_data. DataHub uses existing datasets to generate synthetic models. If no existing data is available it will use user-provided scripts and data rules to generate synthetic data using out-of-the-box helper datasets.
+
 Synthetic datasets are simply artificiality manufactured sets, produced to a desired degree of accuracy. Real Data does play a part in synthetic generation, all depending on the realism you require. The product roadmaps details out the functionality planned in this respect. 
+
 DataHub's core is predominantly based around pandas data frames and object generation.
 A common question: Now that I have a data frame of synthetic-data, what do I do with it? The Pandas library comes with an array of options here - so for the time being sinking to databases is out of the scope of the core library, however see that examples in the test folder for some common patterns. 
+
 **note** As we build out a config based synthetic spec generator, we will bring this back into scope - please see our roadmap/issue list and get involved in the discussion. 
 ## Key documents
 
