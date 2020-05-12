@@ -47,35 +47,6 @@ need to configure pip with your corporate firewall's settings. There are many re
 on stackoverflow how do to this - but essentially you need to set the index and index-url
 to whatever you have setup internally
 
-### Configuring pip to use an internal mirror
-
-----------------------------------------------
-Place the following file @ %APPDATA%\pip\pip.ini
-
-```shellS
-[list]
-format=columns
-
-[global]
-trusted-host = www.your-internal-repository.net
-index-url = https://<user-name>:<password>@www.your-internal-repository.net/pypi/simple
-index = https://<soe-id>:<user-name>@ www.your-internal-repository.net/pypi-dev
-disable-pip-version-check = True
-```
-
-### Configuring pip to use a proxy
-
-----------------------------------------------
-Place the following file @ %APPDATA%\pip\pip.ini
-
-```shellS
-[list]
-format=columns
-
-[global]
-
-```
-
 ### Create a python Virtual Env
 
 ``` shell
