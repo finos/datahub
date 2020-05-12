@@ -36,10 +36,6 @@ is not always the ideal solution as distributions in the data are still
 exposed and is not friendly to work with – Anonymization is an expensive
 involved process
 
-## History
-
-DataHub started in Citi's E4 program (Engineering Excellence 4), Citigroup's highest engineering excellence training program. DataHub originated from the 3rd iteration of the program in 2019.
-
 ## License
 
 Copyright 2020 Citigroup
