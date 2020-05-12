@@ -1,6 +1,7 @@
 <H1>DataHub</H1> 
 
 ![DataHub logo](docs/logo.png) 
+
 _Synthetic data generation_
 
 DataHub is a set of python libraries dedicated to the production of synthetic data to be used in tests, machine learning training, statistical analysis, and other use cases https://en.wikipedia.org/wiki/Synthetic_data. DataHub uses existing datasets to generate synthetic models. If no existing data is available it will use user-provided scripts and data rules to generate synthetic data using out-of-the-box helper datasets.
