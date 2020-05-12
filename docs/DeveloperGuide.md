@@ -5,10 +5,10 @@ title: Developer Guide
 
 The following guide give you a deeper dive about the structure of DataHubsource code and its design philosophy, and explain how to customize DataHubCore by adding your own generator.
 
-# [Source code structure](#source-code-strcture)
-# [Setup local development environment](#setup-local-development-environment)
-# [Add your own generator](#add-your-own-generator)
-# [Add your own model](#add-your-own-model)
+- [Source code structure](#source-code-strcture)
+- [Setup local development environment](#setup-local-development-environment)
+- [Add your own generator](#add-your-own-generator)
+- [Add your own model](#add-your-own-model)
 
 ## <a name="source-code-strcture"></a>Source code structure
 
