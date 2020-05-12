@@ -25,17 +25,6 @@ A common question: Now that I have a data frame of synthetic-data, what do I do
 - **Real data** does play a part in synthetic data generation - depending on how
 realistic you want the output
 
-### Why do we need Synthetic data generation tools?
-
-- A lack of useful test data hampers the development of new systems. Cloning production data (if it exists) creates significant risks requiring continued management and oversight.
-
-- Sharing data with potential partners is problematic and data redaction is not always the ideal solution
-
-– Anonymization is an expensive involved process which often removes any useful insight or value from the dataset.
-
-- Big Data platforms need to be seeded 
-
-
 ## License
 
 Copyright 2020 Citigroup
