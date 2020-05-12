@@ -9,8 +9,43 @@
           "data/countries",
           "data/regions"
         ]
+      },
+      {
+        "type": "subcategory",
+        "label": "dataframe",
+        "ids": [
+          "dataframe/address",
+          "dataframe/choice",
+          "dataframe/company_namer",
+          "dataframe/counter",
+          "dataframe/country_codes",
+          "dataframe/normal_sampler",
+          "dataframe/person",
+          "dataframe/random_range",
+          "dataframe/sic_industry",
+          "dataframe/sic_range",
+          "dataframe/soe_id"      
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "datasets",
+        "ids": [
+          "datasets/address",
+          "datasets/country",
+          "datasets/lei",
+          "datasets/person",
+          "datasets/sic_code",
+          "datasets/sic_range"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "object_decorators",
+        "ids": [
+          "object_decorators/synthetic_attributes"
+        ]
       }
     ]
-
   }
 }
