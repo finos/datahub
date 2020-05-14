@@ -3,7 +3,7 @@ id: developer
 title: Developer Guide
 ---
 
-The following guide give you a deeper dive about the structure of DataHubsource code and its design philosophy, and explain how to customize DataHubCore by adding your own generator.
+The following guide give you a deeper dive about the structure of DataHub source code and its design philosophy, and explain how to customize DataHub by adding your own generator.
 
 - [Source code structure](#source-code-strcture)
 - [Setup local development environment](#setup-local-development-environment)
@@ -12,7 +12,7 @@ The following guide give you a deeper dive about the structure of DataHubsource 
 
 ## <a name="source-code-strcture"></a>Source code structure
 
-The major functionality of DataHubcore sits in the folder datahub_core with the following structure:
+The major functionality of DataHub sits in the folder datahub_core with the following structure:
 
 ``` bash
 ├── data/
