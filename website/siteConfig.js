@@ -37,7 +37,7 @@ const siteConfig = {
   },
 
   // Change the copyright info with correct program/project names */
-  copyright: `Copyright © ${new Date().getFullYear()} DataHub - Citi`,
+  copyright: `Copyright © ${new Date().getFullYear()} DataHub - Citigroup`,
 
   highlight: {
     theme: 'default',
