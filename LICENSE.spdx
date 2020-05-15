@@ -1,7 +1,7 @@
 SPDXVersion: SPDX-2.0
 DataLicense: CC0-1.0
-Creator: Citi
+Creator: Citigroup
 PackageName: DataHub
-PackageOriginator: Citi
+PackageOriginator: Citigroup
 PackageHomePage: https://github.com/finos/datahub
 PackageLicenseDeclared: Apache-2.0
