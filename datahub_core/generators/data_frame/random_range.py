@@ -44,7 +44,7 @@ def random_range(low=0, high=1000000, round_dp=2):
         high=high,
         round_dp=round_dp)
 
-def __random_range(low=0, high=1000000, randomstate=None, df=None, round_dp=2):
+def __random_range(low=0, high=1000000, round_dp=2, context=None, randomstate=None, df=None):
     state = np.random
     if randomstate:
         state = randomstate

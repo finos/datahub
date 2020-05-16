@@ -13,6 +13,7 @@ def generate_from_model(props, model=NoneModel(), count=50, randomstate=np.rando
     the pops parameter is used to populate the rest of the object
     """
     results = []
+    context = {}
 
     for i in range(0, count):
 
@@ -27,7 +28,7 @@ def generate_from_model(props, model=NoneModel(), count=50, randomstate=np.rando
         result.update(model.make_one())
 
         for k, v in props.items():
-            x = v(df=result, randomstate=randomstate)
+            x = v(df=result, context=context, randomstate=randomstate)
             result[k] = x
 
 
@@ -35,11 +36,11 @@ def generate_from_model(props, model=NoneModel(), count=50, randomstate=np.rando
 
     return ResultObject(results)
 
-def generate_from_model_single(props, model=NoneModel(), randomstate=np.random):
+def generate_from_model_single(props, context, model=NoneModel(), randomstate=np.random):
     result = {}
 
     for k, v in props.items():
-        x = v(df=result, randomstate=randomstate)
+        x = v(df=result, context=context, randomstate=randomstate)
         result[k] = x
 
     if isinstance(model, LinearRegressionModel):
@@ -49,9 +50,9 @@ def generate_from_model_single(props, model=NoneModel(), randomstate=np.random):
 
     return result
 
-def generate_from_model_parallel(props, model=NoneModel(), count=50, randomstate=np.random):
+def generate_from_model_parallel(props, context, model=NoneModel(), count=50, randomstate=np.random):
     num_cores = multiprocessing.cpu_count()
-    results = Parallel(n_jobs=num_cores)(delayed(generate_from_model_single)(props, model, randomstate) for i in range(0, count))
+    results = Parallel(n_jobs=num_cores)(delayed(generate_from_model_single)(props, context, model, randomstate) for i in range(0, count))
 
     return ResultObject(results)
 

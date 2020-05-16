@@ -60,7 +60,7 @@ def sic_industry(sic_range_field):
     """
     return functools.partial(__sic_industry, sic_range_field)
 
-def __sic_industry(sic_field, randomstate=None, df=None):
+def __sic_industry(sic_field, context=None, randomstate=None, df=None):
     """ Internal function, do not use """
     if randomstate is None:
         randomstate = np.random
@@ -120,7 +120,7 @@ def sic_range():
 
     return functools.partial(__sic_range)
 
-def __sic_range(randomstate=None, df=None):
+def __sic_range(context=None, randomstate=None, df=None):
     if randomstate is None:
         randomstate = np.random
 

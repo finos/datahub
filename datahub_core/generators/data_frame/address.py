@@ -48,7 +48,7 @@ def address(country_field):
         country_field=country_field)
 
 
-def __address(country_field, randomstate=None, df=None):
+def __address(country_field, context=None, randomstate=None, df=None):
     country_code = df[country_field]
     gen = AddressGenerator(randomstate)
     return gen.make(country_code)

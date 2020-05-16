@@ -4,6 +4,16 @@ from ... import resource
 from ... import metrics as fr_metrics
 from ...libs.markov_chains import MName
 
+def prep_file(file_name):
+    items = []
+
+    with open(file_name) as files:
+        for newline in files:
+            items.append(newline)
+    return items
+
+NAMES = prep_file(resource('company_names.txt'))
+
 
 class CompanyNameMarkov:
     """ Generates legal entity names using Markov-Chains """
@@ -11,10 +21,10 @@ class CompanyNameMarkov:
     random_state: numpy.random.RandomState
     sic = {}
 
-    def __init__(self, seed):
-        names = prep_file(resource('company_names.txt'))
+    @fr_metrics.timeit
+    def __init__(self, seed):        
         self.random_state = seed
-        self.namer = MName(names, self.random_state, 3)
+        self.namer = MName(NAMES, self.random_state, 3)
 
 
     @fr_metrics.timeit
@@ -38,11 +48,3 @@ class CompanyNameMarkov:
             full_name = full_name.replace('{x}', name, 1)
 
         return full_name
-
-def prep_file(file_name):
-    items = []
-
-    with open(file_name) as files:
-        for newline in files:
-            items.append(newline)
-    return items

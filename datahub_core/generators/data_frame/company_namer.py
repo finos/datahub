@@ -55,11 +55,17 @@ def company_namer(field, field_type='sic', countrycode_field=None,):
         countrycode_field=countrycode_field)
 
 
-def __company_namer(field, randomstate=None, field_type='sic', countrycode_field=None, df=None):
+def __company_namer(field, field_type='sic', countrycode_field=None, context=None, randomstate=None, df=None):
+    
     if randomstate is None:
         randomstate = np.random
-    gen = LegalEntityNameGenerator2(randomstate)
-    print(df)
+
+    if 'LegalEntityNameGenerator2' not in context:
+        context['LegalEntityNameGenerator2'] = LegalEntityNameGenerator2(randomstate)
+
+    
+    gen = context['LegalEntityNameGenerator2']
+
     field_value = df[field]
 
     if countrycode_field:

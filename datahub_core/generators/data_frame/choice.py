@@ -37,7 +37,7 @@ def choice(data, weights=None):
         weights=weights
     )
 
-def __choice(data, weights=None, randomstate=None, df=None):
+def __choice(data, weights=None, context=None, randomstate=None, df=None):
     if not randomstate:
         randomstate = np.random
 

@@ -39,7 +39,7 @@ def soe_id(name_field):
     """
     return functools.partial(__soe_id, name_field)
 
-def __soe_id(name_field, df=None, randomstate=None):
+def __soe_id(name_field, df=None, context=None, randomstate=None):
     parts = df[name_field].split()
     prefix = ""
 

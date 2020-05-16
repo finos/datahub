@@ -22,6 +22,7 @@ class CompanyNameSuffixGenerator:
         #fake.seed_instance(self.seed)
 
         while True:
+            ## We didn't like 'and sons'
             value = fake.format('company_suffix')
             if value != 'and Sons':
                 return value

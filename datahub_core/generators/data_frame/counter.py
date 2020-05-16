@@ -30,5 +30,5 @@ def counter(counter_state):
 
     return functools.partial(__counter, counter_state)
 
-def __counter(counter_state, df=None, randomstate=None):
+def __counter(counter_state, context=None, df=None, randomstate=None):
     return counter_state.get_one()

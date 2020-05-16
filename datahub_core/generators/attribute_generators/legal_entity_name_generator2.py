@@ -3,7 +3,6 @@ import json
 import numpy
 from ... import metrics
 from ... import resource
-#from .company_name_rnn import CompanyNameGeneratorRNN
 from .company_name_markov import CompanyNameMarkov
 from .company_name_suffix import CompanyNameSuffixGenerator
 
@@ -25,7 +24,6 @@ for item in DATA:
 
 SUFFIC_GENERATOR = CompanyNameSuffixGenerator()
 
-RNN_NAMERS = {}
 
 class LegalEntityNameGenerator2:
     """ Generates legal entity names using Markov-Chains """
@@ -35,6 +33,7 @@ class LegalEntityNameGenerator2:
 
     def __init__(self, randomstate):
         self.random_state = randomstate
+        self.namer = CompanyNameMarkov(self.random_state)
 
 
     @metrics.timeit
@@ -51,12 +50,12 @@ class LegalEntityNameGenerator2:
         config = self.random_state.choice(client_types)
         return self.create_name(config, country_code)
 
-
+    @metrics.timeit
     def create_name(self, config, country_code):
         while True:
             model = config['models'][0]
 
-            full_name = CompanyNameMarkov(self.random_state).make(model)
+            full_name = self.namer.make(model)
 
             postfixes = config['postfixes']
 

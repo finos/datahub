@@ -43,7 +43,7 @@ def person(country_field):
     return functools.partial(__person, country_field)
 
 
-def __person(country_field, df=None, randomstate=None):
+def __person(country_field, context=None, df=None, randomstate=None):
 
     country = df[country_field]
     generator = PersonGenerator(randomstate)
