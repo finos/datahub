@@ -9,7 +9,7 @@ VERSION = '0.9.3'
 setup(
     name='datahub_core',
     version=VERSION,
-    url='https://jenkins-icg-isg-omc-dev-167433.namicggtd10d.nam.nsroot.net/job/datahub_core_lib/',
+    url='https://github.com/finos/datahub',
     license='',
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     package_data={'datahub_core': [
@@ -27,8 +27,7 @@ setup(
         './data/funds/regions.csv',
         './data/**'
     ]},
-    author='Paul Groves',
-    author_email='paul.timothy.groves@citi.com',
+    author='Paul Groves',    
     description='Synthetic data generation tools for financial markets',
     include_package_data=True,
     zip_safe=True,
