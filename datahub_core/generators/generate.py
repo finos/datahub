@@ -20,18 +20,7 @@ def generate_from_model(props, model=NoneModel(), count=50, randomstate=np.rando
         if i% 100 == 0:
             print(i)
 
-        result = {}
-
-        if isinstance(model, LinearRegressionModel):
-            model.set_precondition([result[key] for key in model.xfields])
-
-        result.update(model.make_one())
-
-        for k, v in props.items():
-            x = v(df=result, context=context, randomstate=randomstate)
-            result[k] = x
-
-
+        result = generate_from_model_single(props, context, model, randomstate)
         results.append(result)
 
     return ResultObject(results)
@@ -39,14 +28,21 @@ def generate_from_model(props, model=NoneModel(), count=50, randomstate=np.rando
 def generate_from_model_single(props, context, model=NoneModel(), randomstate=np.random):
     result = {}
 
+    # TODO: improve th dependency handling between sigle props and models
+
+    # check if a model has any pre-condition
+    pre_condition_flag = callable(getattr(model, "set_precondition", None))
+
+    if not pre_condition_flag:
+        result.update(model.make_one())
+
     for k, v in props.items():
         x = v(df=result, context=context, randomstate=randomstate)
         result[k] = x
 
-    if isinstance(model, LinearRegressionModel):
-        model.set_precondition([result[key] for key in model.xfields])
-
-    result.update(model.make_one())
+    if pre_condition_flag:
+        model.set_precondition(result)
+        result.update(model.make_one())
 
     return result
 

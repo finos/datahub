@@ -13,7 +13,7 @@ class LinearRegressionModel:
         self.xvalues = []
 
     def set_precondition(self, data):
-        self.xvalues = [data]
+        self.xvalues = [[data[key] for key in self.xfields]]
 
     def make_one(self):
         predict_result = np.array(self.model.predict(self.xvalues))
