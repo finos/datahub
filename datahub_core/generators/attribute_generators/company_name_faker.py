@@ -10,6 +10,7 @@ class CompanyNameFaker:
 
     random_state: numpy.random.RandomState
 
+    @fr_metrics.timeit
     def __init__(self, seed):
         self.seed = seed
 

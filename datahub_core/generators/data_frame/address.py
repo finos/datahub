@@ -1,6 +1,8 @@
 import functools
+from ... import metrics as fr_metrics
 from ..attribute_generators import AddressGenerator
 
+@fr_metrics.timeit
 def address(country_field):
     """
 
@@ -47,8 +49,15 @@ def address(country_field):
         __address,
         country_field=country_field)
 
-
-def __address(country_field, context=None, randomstate=None, df=None):
+@fr_metrics.timeit
+def __address(country_field, key=None, context=None, randomstate=None, df=None):
     country_code = df[country_field]
-    gen = AddressGenerator(randomstate)
-    return gen.make(country_code)
+    
+    if not context.hasGenerator(key):
+        generator = AddressGenerator(randomstate)
+        context.addGenerator(key, generator)
+    
+    generator = context.getGenerator(key)    
+        
+    
+    return generator.make(country_code)

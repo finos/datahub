@@ -12,6 +12,7 @@ class AddressGenerator:
     seed: int
     addresses = {}
 
+    @fr_metrics.timeit
     def __init__(self, randomstate):
         self.randomstate = randomstate
 
@@ -37,6 +38,7 @@ class AddressGenerator:
             state,
             "")
 
+@fr_metrics.timeit
 def get_state_function(faker):
     """ Fakers state function changes depending on the locale """
 
@@ -53,7 +55,7 @@ def get_state_function(faker):
 
     return ""
 
-
+@fr_metrics.timeit
 def has_function(faker, key):
     """ helper function to check if a method is available on an object"""
     return hasattr(faker, key)

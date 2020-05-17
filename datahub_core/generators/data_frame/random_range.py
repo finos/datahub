@@ -2,7 +2,9 @@
 
 import functools
 import numpy as np
+from ... import metrics as fr_metrics
 
+@fr_metrics.timeit
 def random_range(low=0, high=1000000, round_dp=2):
     """
         Generates a random number within a range rounded to the desired decimal points
@@ -44,7 +46,8 @@ def random_range(low=0, high=1000000, round_dp=2):
         high=high,
         round_dp=round_dp)
 
-def __random_range(low=0, high=1000000, round_dp=2, context=None, randomstate=None, df=None):
+@fr_metrics.timeit
+def __random_range(low=0, high=1000000, round_dp=2, key=None, context=None, randomstate=None, df=None):
     state = np.random
     if randomstate:
         state = randomstate

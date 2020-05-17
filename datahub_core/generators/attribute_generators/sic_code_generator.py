@@ -8,6 +8,7 @@ class SicCodeGenerator:
 
     codes = []
 
+    @fr_metrics.timeit
     def __init__(self, random_state):
         self.codes = SicRawDataAccess().get_sic_data()
         self.random_state = random_state
