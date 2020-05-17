@@ -48,11 +48,11 @@ def person(country_field):
 def __person(country_field, key=None, context=None, df=None, randomstate=None):
 
     country = df[country_field]
-    
-    if not context.hasGenerator(key):
+
+    if not context.has_generator(key):
         generator = PersonGenerator(randomstate)
-        context.addGenerator(key, generator)
-    
-    generator = context.getGenerator(key)    
-    
+        context.add_generator(key, generator)
+
+    generator = context.get_generator(key)
+
     return generator.make(country)

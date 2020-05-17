@@ -10,7 +10,7 @@ class NormalGenerator:
     current = 0
 
     @fr_metrics.timeit
-    def __init__(self, random_state, items):
+    def __init__(self, random_state, items, size=1000):
         self.random_state = random_state
         self.items = items
 

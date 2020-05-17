@@ -8,6 +8,8 @@ def run():
             'region': gen.choice(
                 data=['EMEA', 'LATAM', 'NAM', 'APAC'],
                 weights=[0.1, 0.1, 0.3, 0.5]),
+            'firmAccount': gen.normal_sampler(
+                data=['fa1', 'fa2', 'fa3', 'fa4', 'fa5', 'fa6']),
             "country": gen.country_codes(region_field='region'),
             "client_type": gen.choice(data=data.client_types()),
             "client_name": gen.company_namer(

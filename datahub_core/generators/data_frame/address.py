@@ -52,12 +52,11 @@ def address(country_field):
 @fr_metrics.timeit
 def __address(country_field, key=None, context=None, randomstate=None, df=None):
     country_code = df[country_field]
-    
-    if not context.hasGenerator(key):
+
+    if not context.has_generator(key):
         generator = AddressGenerator(randomstate)
-        context.addGenerator(key, generator)
-    
-    generator = context.getGenerator(key)    
-        
-    
+        context.add_generator(key, generator)
+
+    generator = context.get_generator(key)
+
     return generator.make(country_code)
