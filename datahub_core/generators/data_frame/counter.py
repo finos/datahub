@@ -1,7 +1,9 @@
 #pylint:disable=unused-argument
 
 import functools
+from ... import metrics as fr_metrics
 
+@fr_metrics.timeit
 def counter(counter_state):
     """
     Incremental counter, requires a 'state' object with a function get_one() which returns a number
@@ -30,5 +32,6 @@ def counter(counter_state):
 
     return functools.partial(__counter, counter_state)
 
-def __counter(counter_state, context=None, df=None, randomstate=None):
+@fr_metrics.timeit
+def __counter(counter_state, key=None, context=None, df=None, randomstate=None):
     return counter_state.get_one()

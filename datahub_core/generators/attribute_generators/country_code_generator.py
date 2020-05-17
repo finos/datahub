@@ -10,6 +10,7 @@ class CountryCodeGenerator:
     samples = []
     current = 0
 
+    @fr_metrics.timeit
     def __init__(self, random_state):
         self.random_state = random_state
 

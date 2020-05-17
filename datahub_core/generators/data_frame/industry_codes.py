@@ -1,9 +1,11 @@
 #pylint:disable=unused-argument
 import functools
 import numpy as np
+from ... import metrics as fr_metrics
 from ..attribute_generators import SicCodeGenerator
 from ..attribute_generators import SicRangeGenerator
 
+@fr_metrics.timeit
 def sic_industry(sic_range_field):
     """
     Generates an Industry SIC dode based on a selected industry sector (SicRange)
@@ -60,16 +62,22 @@ def sic_industry(sic_range_field):
     """
     return functools.partial(__sic_industry, sic_range_field)
 
-def __sic_industry(sic_field, context=None, randomstate=None, df=None):
+@fr_metrics.timeit
+def __sic_industry(sic_field, key=None, context=None, randomstate=None, df=None):
     """ Internal function, do not use """
     if randomstate is None:
         randomstate = np.random
 
-    gen = SicCodeGenerator(randomstate)
+    if not context.hasGenerator(key):
+        generator = SicCodeGenerator(randomstate)
+        context.addGenerator(key, generator)
+    
+    generator = context.getGenerator(key)
+    
     sic = df[sic_field]
-    return gen.make(sic.start, sic.end)
+    return generator.make(sic.start, sic.end)
 
-
+@fr_metrics.timeit
 def sic_range():
     """
     Generates an Industry SIC Sector
@@ -120,10 +128,15 @@ def sic_range():
 
     return functools.partial(__sic_range)
 
-def __sic_range(context=None, randomstate=None, df=None):
+@fr_metrics.timeit
+def __sic_range(key=None, context=None, randomstate=None, df=None):
     if randomstate is None:
         randomstate = np.random
 
-    gen = SicRangeGenerator(randomstate)
+    if not context.hasGenerator(key):
+        generator = SicRangeGenerator(randomstate)
+        context.addGenerator(key, generator)
+    
+    generator = context.getGenerator(key)
 
-    return gen.make()
+    return generator.make()

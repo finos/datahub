@@ -10,6 +10,7 @@ class SicRangeGenerator:
     current = 0
     samples = []
 
+    @fr_metrics.timeit
     def __init__(self, random_state):
 
         codes = parse_file()
@@ -37,6 +38,7 @@ class SicRangeGenerator:
         return value
 
 
+@fr_metrics.timeit
 def parse_file():
     """ get the sic raw data ranges """
     return SicRawDataAccess().get_sic_ranges()

@@ -10,6 +10,7 @@ class PersonGenerator:
     seed: int
     addresses = {}
 
+    @fr_metrics.timeit
     def __init__(self, randomstate):
         self.randomstate = randomstate
 
