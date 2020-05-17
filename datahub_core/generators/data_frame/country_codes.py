@@ -1,7 +1,9 @@
 import functools
 from .. import choice
+from ... import metrics as fr_metrics
 from ...libs.data_access import CountryDataAccess
 
+@fr_metrics.timeit
 def country_codes(region_field=None, fn_distribution=choice):
     """
     Generate a country code, yields a country object from datahub_core.datasets.country
@@ -40,7 +42,8 @@ def country_codes(region_field=None, fn_distribution=choice):
         region_field=region_field,
         fn_distribution=fn_distribution)
 
-def __country_codes(region_field=None, fn_distribution=choice, context=None, randomstate=None, df=None):
+@fr_metrics.timeit
+def __country_codes(region_field=None, fn_distribution=choice, key=None, context=None, randomstate=None, df=None):
     ''' Internal function '''
     countries = []
 

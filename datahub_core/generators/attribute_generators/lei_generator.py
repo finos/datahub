@@ -7,6 +7,7 @@ from ...datasets import LEI
 class LeiGenerator: # pylint: disable=too-few-public-methods
     """ Generates Lei numbers """
 
+    @fr_metrics.timeit
     def __init__(self, random_state):
         self.random_state = random_state
 
