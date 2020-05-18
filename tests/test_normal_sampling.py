@@ -1,4 +1,3 @@
-#import matplotlib.pyplot as plt
 import numpy as np
 import datahub_core.generators as gen
 import datahub_core.data as data
@@ -17,9 +16,12 @@ def test_correct_number_of_rows_are_generated():
 
     df['country'] = df['country'].map(lambda x: x.alpha2_code)
 
+
+    ax = df['country'].value_counts().plot(kind='bar')
+    ax = df['country'].value_counts().plot(x='month', linestyle='-', marker='o', ax=ax)
+    ax.set_xlabel("Country")
+    ax.set_ylabel("Count")
+    
     # uncomment to plot!
-    # ax = df['country'].value_counts().plot(kind='bar')
-    # ax = df['country'].value_counts().plot(x='month', linestyle='-', marker='o', ax=ax)
-    # ax.set_xlabel("Country")
-    # ax.set_ylabel("Count")
-    #plt.show()
+    # import matplotlib.pyplot as plt
+    # plt.show()
