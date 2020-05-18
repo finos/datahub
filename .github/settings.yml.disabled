@@ -28,11 +28,11 @@ labels:
     description: Help Wanted
   
 teams:
-  - name: finos/datahub
+  - name: datahub
     permission: maintain
-  - name: finos/finos-staff
+  - name: finos-staff
     permission: triage
-  - name: finos/finos-admins
+  - name: finos-admins
     permission: maintain  
  
 branches:  
