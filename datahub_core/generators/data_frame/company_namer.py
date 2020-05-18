@@ -1,9 +1,10 @@
 """ top line doc """
 import functools
 import numpy as np
+from ... import metrics as fr_metrics
 from ..attribute_generators import LegalEntityNameGenerator2
 
-
+@fr_metrics.timeit
 def company_namer(field, field_type='sic', countrycode_field=None,):
     """
 
@@ -54,17 +55,17 @@ def company_namer(field, field_type='sic', countrycode_field=None,):
         field_type=field_type,
         countrycode_field=countrycode_field)
 
-
-def __company_namer(field, field_type='sic', countrycode_field=None, context=None, randomstate=None, df=None):
+@fr_metrics.timeit
+def __company_namer(field, field_type='sic', countrycode_field=None, key=None, context=None, randomstate=None, df=None):
     
     if randomstate is None:
         randomstate = np.random
 
-    if 'LegalEntityNameGenerator2' not in context:
-        context['LegalEntityNameGenerator2'] = LegalEntityNameGenerator2(randomstate)
-
+    if not context.hasGenerator(key):
+        generator = LegalEntityNameGenerator2(randomstate)
+        context.addGenerator(key, generator)
     
-    gen = context['LegalEntityNameGenerator2']
+    generator = context.getGenerator(key)
 
     field_value = df[field]
 
@@ -72,10 +73,10 @@ def __company_namer(field, field_type='sic', countrycode_field=None, context=Non
         countrycode_field = df[countrycode_field]
 
     if field_type == 'sic':
-        value = gen.make(field_value, countrycode_field)
+        value = generator.make(field_value, countrycode_field)
 
     elif field_type == 'client_type':
-        value = gen.make_clienttype(field_value, countrycode_field)
+        value = generator.make_clienttype(field_value, countrycode_field)
 
     else:
         return None

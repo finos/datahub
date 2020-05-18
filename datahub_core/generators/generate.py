@@ -3,9 +3,11 @@ import multiprocessing
 import numpy as np
 from joblib import Parallel, delayed
 from . import ResultObject
+from . import Context
 from ..models import NoneModel
 from ..models import MarkovModel
 from ..models import LinearRegressionModel
+
 
 def generate_from_model(props, model=NoneModel(), count=50, randomstate=np.random):
     """
@@ -13,7 +15,10 @@ def generate_from_model(props, model=NoneModel(), count=50, randomstate=np.rando
     the pops parameter is used to populate the rest of the object
     """
     results = []
-    context = {}
+    context = Context(count)
+
+    for k, v in props.items():
+        print(k)        
 
     for i in range(0, count):
 
@@ -37,7 +42,7 @@ def generate_from_model_single(props, context, model=NoneModel(), randomstate=np
         result.update(model.make_one())
 
     for k, v in props.items():
-        x = v(df=result, context=context, randomstate=randomstate)
+        x = v(df=result, key=k, context=context, randomstate=randomstate)
         result[k] = x
 
     if pre_condition_flag:

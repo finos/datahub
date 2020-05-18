@@ -35,13 +35,11 @@ class LegalEntityNameGenerator2:
         self.random_state = randomstate
         self.namer = CompanyNameMarkov(self.random_state)
 
-
     @metrics.timeit
     def make(self, sic, country_code=None):
         """ Make a name """
         config = SIC[sic.code]
         return self.create_name(config, country_code)
-
 
     @metrics.timeit
     def make_clienttype(self, client_type, country_code=None):

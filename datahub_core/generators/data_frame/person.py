@@ -1,8 +1,10 @@
 import functools
+from ... import metrics as fr_metrics
 from ..attribute_generators import PersonGenerator
 
 FAKERS = {}
 
+@fr_metrics.timeit
 def person(country_field):
     """
     Returns a localised Person
@@ -42,9 +44,15 @@ def person(country_field):
 
     return functools.partial(__person, country_field)
 
-
-def __person(country_field, context=None, df=None, randomstate=None):
+@fr_metrics.timeit
+def __person(country_field, key=None, context=None, df=None, randomstate=None):
 
     country = df[country_field]
-    generator = PersonGenerator(randomstate)
+    
+    if not context.hasGenerator(key):
+        generator = PersonGenerator(randomstate)
+        context.addGenerator(key, generator)
+    
+    generator = context.getGenerator(key)    
+    
     return generator.make(country)

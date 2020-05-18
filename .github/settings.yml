@@ -7,7 +7,7 @@ repository:
   description: DataHub - Synthetic data library
   homepage: DataHub - Synthetic data library
   topics: data, synthetic, python, library, pandas, sklearn
-  private: true
+  private: false
   has_issues: true
   has_projects: false
   has_wiki: false
@@ -17,37 +17,37 @@ repository:
   allow_merge_commit: true
   allow_rebase_merge: false
   
-  labels:
-    - name: bug
-      color: CC0000
-      description: An issue with the system 🐛.  
-    - name: feature
-      color: '#336699'
-      description: New functionality.
-    - name: first-timers-only
-      description: Help Wanted
+labels:
+  - name: bug
+    color: CC0000
+    description: An issue with the system 🐛.  
+  - name: feature
+    color: '#336699'
+    description: New functionality.
+  - name: first-timers-only
+    description: Help Wanted
   
-  teams:
-    - name: finos/datahub
-      permission: maintain
-    - name: finos/finos-staff
-      permission: triage
-    - name: finos/finos-admins
-      permission: maintain
-  
-  branches:
-    - name: master
-      protection:
-        required_pull_request_reviews:
-          required_approving_review_count: 1
-          dismiss_stale_reviews: true
-          require_code_owner_reviews: true
-          dismissal_restrictions:
-        required_status_checks:
-          strict: true
-          contexts: [ "verification/cla-signed" ]
-        enforce_admins: true
-        restrictions:
-          apps: []
-          users: []
-          teams: [ "finos/datahub" ]
+teams:
+  - name: finos/datahub
+    permission: maintain
+  - name: finos/finos-staff
+    permission: triage
+  - name: finos/finos-admins
+    permission: maintain  
+ 
+branches:  
+  - name: master
+    protection:
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+        dismiss_stale_reviews: true
+        require_code_owner_reviews: true
+        dismissal_restrictions:
+      required_status_checks:
+        strict: true
+        contexts: [ "verification/cla-signed" ]
+      enforce_admins: true
+      restrictions:
+        apps: []
+        users: []
+        teams: [ "finos/datahub" ]

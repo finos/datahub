@@ -3,6 +3,7 @@ import re
 from ... import resource
 from ... import metrics as fr_metrics
 
+@fr_metrics.timeit
 def prep_file(file_name):
     items = []
 
@@ -20,7 +21,7 @@ CLASS = prep_file(resource('funds/classes.csv'))
 class FundNameGenerator: # pylint: disable=too-few-public-methods
     """ Generates Lei numbers """
 
-
+    @fr_metrics.timeit
     def __init__(self, random_state):
         self.random_state = random_state
 

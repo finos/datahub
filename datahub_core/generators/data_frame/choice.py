@@ -1,7 +1,9 @@
 #pylint:disable=unused-argument
 import functools
 import numpy as np
+from ... import metrics as fr_metrics
 
+@fr_metrics.timeit
 def choice(data, weights=None):
     """
 
@@ -37,7 +39,8 @@ def choice(data, weights=None):
         weights=weights
     )
 
-def __choice(data, weights=None, context=None, randomstate=None, df=None):
+@fr_metrics.timeit
+def __choice(data, weights=None, key=None, context=None, randomstate=None, df=None):
     if not randomstate:
         randomstate = np.random
 

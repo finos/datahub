@@ -4,6 +4,7 @@ from ... import resource
 from ... import metrics as fr_metrics
 from ...libs.markov_chains import MName
 
+@fr_metrics.timeit
 def prep_file(file_name):
     items = []
 
