@@ -1,15 +1,25 @@
+#import matplotlib.pyplot as plt
 import numpy as np
 import datahub_core.generators as gen
+import datahub_core.data as data
 
 def test_correct_number_of_rows_are_generated():
 
     df = gen.generate_from_model(
         props={
-            'region' : gen.normal_sampler(
-                data=['EMEA', 'NAM', 'APAC', 'LATAM'])
+            'country': gen.normal_sampler(
+                mu=1,
+                data=data.countries())
         },
-        count=1000,
-        randomstate=np.random.RandomState()
+        count=100000,
+        randomstate=np.random.RandomState(13031981)
     ).to_dataframe()
 
-    print(df)
+    df['country'] = df['country'].map(lambda x: x.alpha2_code)
+
+    # uncomment to plot!
+    # ax = df['country'].value_counts().plot(kind='bar')
+    # ax = df['country'].value_counts().plot(x='month', linestyle='-', marker='o', ax=ax)
+    # ax.set_xlabel("Country")
+    # ax.set_ylabel("Count")
+    #plt.show()

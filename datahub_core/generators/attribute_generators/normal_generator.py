@@ -10,27 +10,28 @@ class NormalGenerator:
     current = 0
 
     @fr_metrics.timeit
-    def __init__(self, random_state, items, size=1000):
+    def __init__(self, random_state, items, size=1000, mu=0, sigma=None):
         self.random_state = random_state
         self.items = items
 
         # setup a normal distribution function to create samples
         lower, upper = 0, len(self.items)
-        m_u, sigma = 0, upper / 4
+
+        if not sigma:
+            sigma = upper / 4
 
         normal_gen = scipy.stats.truncnorm(
-            (lower - m_u) / sigma, (upper - m_u) / sigma,
-            loc=m_u,
+            (lower - mu) / sigma, (upper - mu) / sigma,
+            loc=mu,
             scale=sigma)
 
         normal_gen.random_state = self.random_state
-        indices = normal_gen.rvs(1000, random_state=self.random_state)
+        indices = normal_gen.rvs(size, random_state=self.random_state)
 
-        data = []
         for index in indices:
             item = self.items[int(index)]
-            data.append(item)
-        self.data = data
+            self.data.append(item)
+
 
     @fr_metrics.timeit
     def make(self):
