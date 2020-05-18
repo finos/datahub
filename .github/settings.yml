@@ -7,7 +7,7 @@ repository:
   description: DataHub - Synthetic data library
   homepage: DataHub - Synthetic data library
   topics: data, synthetic, python, library, pandas, sklearn
-  private: true
+  private: false
   has_issues: true
   has_projects: false
   has_wiki: false
