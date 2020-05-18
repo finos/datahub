@@ -27,8 +27,6 @@ generate:
         - datahub_core.generators.random_range
     - docs/dataframe/normal_sampler.md:
         - datahub_core.generators.normal_sampler
-    - docs/dataframe/soe_id.md:
-        - datahub_core.generators.soe_id
     - docs/data/regions.md:
         - datahub_core.data.regions
     - docs/data/countries.md:

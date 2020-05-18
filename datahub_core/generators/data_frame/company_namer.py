@@ -56,16 +56,22 @@ def company_namer(field, field_type='sic', countrycode_field=None,):
         countrycode_field=countrycode_field)
 
 @fr_metrics.timeit
-def __company_namer(field, field_type='sic', countrycode_field=None, key=None, context=None, randomstate=None, df=None):
-    
+def __company_namer(
+        field,
+        field_type='sic',
+        countrycode_field=None,
+        key=None, context=None,
+        randomstate=None,
+        df=None):
+
     if randomstate is None:
         randomstate = np.random
 
-    if not context.hasGenerator(key):
+    if not context.has_generator(key):
         generator = LegalEntityNameGenerator2(randomstate)
-        context.addGenerator(key, generator)
-    
-    generator = context.getGenerator(key)
+        context.add_generator(key, generator)
+
+    generator = context.get_generator(key)
 
     field_value = df[field]
 

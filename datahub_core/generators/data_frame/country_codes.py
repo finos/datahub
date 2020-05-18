@@ -1,3 +1,4 @@
+# pylint: disable=unused-argument
 import functools
 from .. import choice
 from ... import metrics as fr_metrics
@@ -43,7 +44,13 @@ def country_codes(region_field=None, fn_distribution=choice):
         fn_distribution=fn_distribution)
 
 @fr_metrics.timeit
-def __country_codes(region_field=None, fn_distribution=choice, key=None, context=None, randomstate=None, df=None):
+def __country_codes(
+        region_field=None,
+        fn_distribution=choice,
+        key=None,
+        context=None,
+        randomstate=None,
+        df=None):
     ''' Internal function '''
     countries = []
 

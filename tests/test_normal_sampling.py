@@ -1,27 +1,27 @@
 import numpy as np
 import datahub_core.generators as gen
+import datahub_core.data as data
 
 def test_correct_number_of_rows_are_generated():
 
-    df = gen.generate(
+    df = gen.generate_from_model(
         props={
-            'region': gen.choice(
-                data=['EMEA', 'LATAM', 'NAM', 'APAC'],
-                weights=[0.1, 0.1, 0.3, 0.5]),
-            'sic_range' : gen.sic_range(),
-            'sic': gen.sic_industry(sic_range_field='sic_range'),
-            'country': gen.country_codes(region_field='region'),
-            'client_name': gen.company_namer(
-                field='sic',
-                field_type='sic',
-                countrycode_field='country'
-            )},
-        count=50,
+            'country': gen.normal_sampler(
+                mu=1,
+                data=data.countries())
+        },
+        count=100000,
         randomstate=np.random.RandomState(13031981)
     ).to_dataframe()
 
-    df['sic_range'] = df['sic_range'].apply(lambda x: x.name)
-    df['sic'] = df['sic'].apply(lambda x: x.name)
-    df['country'] = df['country'].apply(lambda x: x.alpha3_code)
+    df['country'] = df['country'].map(lambda x: x.alpha2_code)
 
-    print(df)
+
+    ax = df['country'].value_counts().plot(kind='bar')
+    ax = df['country'].value_counts().plot(x='month', linestyle='-', marker='o', ax=ax)
+    ax.set_xlabel("Country")
+    ax.set_ylabel("Count")
+    
+    # uncomment to plot!
+    # import matplotlib.pyplot as plt
+    # plt.show()

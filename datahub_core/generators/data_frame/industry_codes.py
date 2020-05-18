@@ -68,12 +68,12 @@ def __sic_industry(sic_field, key=None, context=None, randomstate=None, df=None)
     if randomstate is None:
         randomstate = np.random
 
-    if not context.hasGenerator(key):
+    if not context.has_generator(key):
         generator = SicCodeGenerator(randomstate)
-        context.addGenerator(key, generator)
-    
-    generator = context.getGenerator(key)
-    
+        context.add_generator(key, generator)
+
+    generator = context.get_generator(key)
+
     sic = df[sic_field]
     return generator.make(sic.start, sic.end)
 
@@ -133,10 +133,10 @@ def __sic_range(key=None, context=None, randomstate=None, df=None):
     if randomstate is None:
         randomstate = np.random
 
-    if not context.hasGenerator(key):
+    if not context.has_generator(key):
         generator = SicRangeGenerator(randomstate)
-        context.addGenerator(key, generator)
-    
-    generator = context.getGenerator(key)
+        context.add_generator(key, generator)
+
+    generator = context.get_generator(key)
 
     return generator.make()

@@ -47,7 +47,15 @@ def random_range(low=0, high=1000000, round_dp=2):
         round_dp=round_dp)
 
 @fr_metrics.timeit
-def __random_range(low=0, high=1000000, round_dp=2, key=None, context=None, randomstate=None, df=None):
+def __random_range(
+        low=0,
+        high=1000000,
+        round_dp=2,
+        key=None,
+        context=None,
+        randomstate=None,
+        df=None):
+
     state = np.random
     if randomstate:
         state = randomstate

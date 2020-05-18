@@ -1,46 +1,67 @@
-#pylint:disable=unused-argument
+#pylint:disable=unused-argument,line-too-long
 import functools
-import scipy
-import numpy as np
 from ... import metrics as fr_metrics
 from ..attribute_generators import NormalGenerator
 
 @fr_metrics.timeit
-def normal_sampler(data):
-    return functools.partial(__normal_sampler, data=data)
+def normal_sampler(data, mu=0, sigma=None):
+    """
+    Picks elements from an array to a Normal distribution. Probability of selection
+    is in the order of the data array, e.g. data[0] has a higher probability than
+    data[1], data[2], data[3] and so on.
+
+    ## Arguments:
+    data, array
+
+    Array of elements to select from. Items at the start of the array have a higher
+    probability than items at the back of the array
+
+    mu, float:
+    The mean https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.random.normal.html
+
+    sigma, float:
+    The standard deviation https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.random.normal.html
+
+    ## Returns:
+
+    ## Example:
+    import numpy as np
+    import datahub_core.generators as gen
+    import datahub_core.data as data
+
+    def test_correct_number_of_rows_are_generated():
+
+        df = gen.generate_from_model(
+            props={
+                'country': gen.normal_sampler(
+                    mu=1,
+                    data=data.countries())
+            },
+            count=100000,
+            randomstate=np.random.RandomState(13031981)
+        ).to_dataframe()
+
+        df['country'] = df['country'].map(lambda x: x.alpha2_code)
+
+
+        ax = df['country'].value_counts().plot(kind='bar')
+        ax = df['country'].value_counts().plot(x='month', linestyle='-', marker='o', ax=ax)
+        ax.set_xlabel("Country")
+        ax.set_ylabel("Count")
+        plt.show()
+
+    """
+
+    return functools.partial(__normal_sampler, data=data, mu=mu, sigma=sigma)
 
 @fr_metrics.timeit
-def __normal_sampler(data, key=None, ontext=None, randomstate=None, df=None):
+def __normal_sampler(data, mu=0, sigma=None, key=None, context=None, randomstate=None, df=None):
 
-    if not context.hasGenerator(key):
-        generator = NormalGenerator(randomstate, data.copy())
-        context.addGenerator(key, gen)
-    
-    generator = context.getGenerator(key)
-    
+    if not context.has_generator(key):
+        generator = NormalGenerator(randomstate, data.copy(), context.record_count, mu, sigma)
+        context.add_generator(key, generator)
+
+    generator = context.get_generator(key)
+
     value = generator.make()
     return value
-
-@fr_metrics.timeit
-def normal(lower=0, upper=1.0, mu=0, sigma=None, randomstate=None, df=None):
-    return functools.partial(__normal, lower, upper, mu, sigma)
-
-@fr_metrics.timeit
-def __normal(lower=0, upper=1.0, mu=0, sigma=None, key=None, context=None, randomstate=None, df=None):
-
-    if not randomstate:
-        randomstate = np.random
-
-    if not sigma:
-        sigma = upper / 4
-
-
-
-    normal_gen = scipy.stats.truncnorm(
-        (lower - mu) / sigma, (upper - mu) / sigma,
-        loc=mu,
-        scale=sigma)
-
-    normal_gen.random_state = randomstate
-
-    normal_gen.rvs(1000, random_state=randomstate)

@@ -47,8 +47,3 @@ def __choice(data, weights=None, key=None, context=None, randomstate=None, df=No
     if weights:
         return randomstate.choice(data, p=weights)
     return randomstate.choice(data)
-
-
-# def weight_normal(data):
-
-# def weight_exponential(data):
