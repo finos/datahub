@@ -21,7 +21,7 @@ def test_correct_number_of_rows_are_generated():
     ax = df['country'].value_counts().plot(x='month', linestyle='-', marker='o', ax=ax)
     ax.set_xlabel("Country")
     ax.set_ylabel("Count")
-    
+
     # uncomment to plot!
     # import matplotlib.pyplot as plt
     # plt.show()

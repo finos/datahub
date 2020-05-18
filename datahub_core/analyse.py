@@ -1,4 +1,4 @@
-#pylint:disable=broad-except, line-too-long
+#pylint:disable=broad-except, line-too-long, unused-argument, unnecessary-lambda, too-many-locals
 import io
 import pprint
 import json

@@ -1,3 +1,4 @@
+#pylint:disable=no-self-use
 """ sic_loader module """
 import json
 from ... import resource

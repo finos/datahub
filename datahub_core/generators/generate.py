@@ -6,8 +6,6 @@ from . import ResultObject
 from . import Context
 from ..models import NoneModel
 from ..models import MarkovModel
-from ..models import LinearRegressionModel
-
 
 def generate_from_model(props, model=NoneModel(), count=50, randomstate=np.random):
     """
@@ -17,8 +15,8 @@ def generate_from_model(props, model=NoneModel(), count=50, randomstate=np.rando
     results = []
     context = Context(count)
 
-    for k, v in props.items():
-        print(k)        
+    for k, _ in props.items():
+        print(k)
 
     for i in range(0, count):
 
@@ -32,8 +30,6 @@ def generate_from_model(props, model=NoneModel(), count=50, randomstate=np.rando
 
 def generate_from_model_single(props, context, model=NoneModel(), randomstate=np.random):
     result = {}
-
-    # TODO: improve th dependency handling between sigle props and models
 
     # check if a model has any pre-condition
     pre_condition_flag = callable(getattr(model, "set_precondition", None))

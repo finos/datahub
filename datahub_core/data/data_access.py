@@ -1,5 +1,5 @@
 from ..libs.data_access import country_data_access
-from ..libs.data_access import sic_raw_daa_access
+from ..libs.data_access import sic_raw_data_access
 
 def regions():
     """
@@ -61,7 +61,7 @@ def client_types():
     return CLEINT_TYPES
 
 def sic_ranges():
-    return sic_raw_daa_access.SIC_RANGES
+    return sic_raw_data_access.SIC_RANGES
 
 def sic_codes(sic_range=None):
     """
@@ -90,7 +90,7 @@ def sic_codes(sic_range=None):
         }
 
     """
-    data = sic_raw_daa_access.SicRawDataAccess().get_sic_data()
+    data = sic_raw_data_access.SicRawDataAccess().get_sic_data()
 
     if not sic_range:
         return data

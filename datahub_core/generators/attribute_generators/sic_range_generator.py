@@ -17,9 +17,10 @@ class SicRangeGenerator:
 
         # setup a normal distribution function to create samples
         lower, upper = 0, len(codes)
-        μ, σ = 0, upper
+        mu, sigma = 0, upper
 
-        normal = scipy.stats.truncnorm((lower - μ) / σ, (upper - μ) / σ, loc=μ, scale=σ)
+        normal = scipy.stats.truncnorm(
+            (lower - mu) / sigma, (upper - mu) / sigma, loc=mu, scale=sigma)
         indices = normal.rvs(100000, random_state)
 
         for index in indices:
@@ -38,7 +39,6 @@ class SicRangeGenerator:
         return value
 
 
-@fr_metrics.timeit
 def parse_file():
     """ get the sic raw data ranges """
     return SicRawDataAccess().get_sic_ranges()

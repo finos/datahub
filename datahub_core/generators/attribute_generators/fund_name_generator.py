@@ -1,3 +1,4 @@
+#pylint:disable=no-self-use
 """ lei_generator """
 import re
 from ... import resource

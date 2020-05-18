@@ -1,3 +1,3 @@
 from .none_model import NoneModel
 from .markov import MarkovModel
-from .sklearn import LinearRegressionModel
+from .sklearn.linear_regression_model import LinearRegressionModel

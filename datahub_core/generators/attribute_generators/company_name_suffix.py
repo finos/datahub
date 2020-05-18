@@ -1,3 +1,4 @@
+#pylint:disable=no-self-use
 """ company name generator using faker """
 from faker import Faker
 from faker.providers import company
@@ -19,7 +20,6 @@ class CompanyNameSuffixGenerator:
             FAKERS[country.locale] = fake
 
         fake = FAKERS[country.locale]
-        #fake.seed_instance(self.seed)
 
         while True:
             ## We didn't like 'and sons'

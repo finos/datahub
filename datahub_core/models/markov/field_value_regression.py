@@ -1,6 +1,6 @@
-from ... import Printable
+#pylint:disable=line-too-long
 import scipy.stats as st
-import statsmodels as sm
+from ... import Printable
 
 class FieldValueRegression(Printable):
     field_value = 0
@@ -12,6 +12,8 @@ class FieldValueRegression(Printable):
     max: None
     median: None
     next_field: None
+    best_fit: None
+    fit_parameter: ''
 
     def __init__(self, randomstate):
         self.randomstate = randomstate
@@ -19,7 +21,7 @@ class FieldValueRegression(Printable):
     def get_field_value(self):
 
         if self.count > 1:
-            if self.best_fit != None:
+            if self.best_fit is not None:
                 best_dist = getattr(st, self.best_fit)
                 params = list(map(float, self.fit_parameter.split(',')))
                 arg = params[:-2]
@@ -29,11 +31,9 @@ class FieldValueRegression(Printable):
                 while s < self.min or s > self.max:
                     s = best_dist.rvs(*arg, loc=loc, scale=scale) if arg else best_dist.rvs(loc=loc, scale=scale)
                 return round(s, 2)
-            else:
-                mean, std = self.mean, self.std
-                s = self.randomstate.normal(mean, std, 1)
-                while s[0] < self.min or s[0] > self.max:
-                    s = self.randomstate.normal(mean, std, 1)
-                return round(s[0], 2)
 
-        return self.mean
+        mean, std = self.mean, self.std
+        s = self.randomstate.normal(mean, std, 1)
+        while s[0] < self.min or s[0] > self.max:
+            s = self.randomstate.normal(mean, std, 1)
+        return round(s[0], 2)

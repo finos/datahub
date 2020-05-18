@@ -13,4 +13,3 @@ from .data_frame.counter import counter
 from .data_frame.industry_codes import sic_range
 from .data_frame.industry_codes import sic_industry
 from .data_frame.normal_sampler import normal_sampler
-

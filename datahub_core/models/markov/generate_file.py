@@ -1,3 +1,4 @@
+#pylint:disable=too-many-locals
 import io
 import json
 import pandas as pd

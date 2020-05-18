@@ -32,7 +32,7 @@ class MName:
             suffix = self.mcd.get_suffix(prefix)
             if suffix == "\n" or len(name) > 90:
                 break
-            else:
-                name = name + suffix
-                prefix = prefix[1:] + suffix
+
+            name = name + suffix
+            prefix = prefix[1:] + suffix
         return name.capitalize()

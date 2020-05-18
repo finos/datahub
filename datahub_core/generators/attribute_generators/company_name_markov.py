@@ -23,7 +23,7 @@ class CompanyNameMarkov:
     sic = {}
 
     @fr_metrics.timeit
-    def __init__(self, seed):        
+    def __init__(self, seed):
         self.random_state = seed
         self.namer = MName(NAMES, self.random_state, 3)
 
