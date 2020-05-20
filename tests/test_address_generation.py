@@ -22,5 +22,3 @@ def test_address_generation():
     df['postal)code'] = df['address'].apply(lambda x: x.postal_code)
 
     del df['address']
-
-    #print(df)

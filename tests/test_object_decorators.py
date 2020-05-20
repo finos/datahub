@@ -2,11 +2,7 @@ import datahub_core.generators.object_decorators as od
 
 def test_decorators_on_object():
     entity = TestEntity()
-
     print(entity)
-    print(f'count={entity.count}')
-    print(f'number={entity.number}')
-    print(f'region={entity.region}')
 
 
 @od.synthetic_attributes()
@@ -14,7 +10,7 @@ class TestEntity:
     number: int
     count: int
     region: str
-
+    
     @od.counter()
     def set_count(self, value):
         self.count = value

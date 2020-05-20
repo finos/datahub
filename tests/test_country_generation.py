@@ -1,4 +1,3 @@
-
 import numpy as np
 import datahub_core.generators as gen
 import datahub_core.data as data
@@ -42,7 +41,7 @@ def test_countries_are_in_not_in_nam_target_region():
         count=100,
         randomstate=np.random.RandomState(13031981)
     ).to_dataframe()
-
+    
     country_list = data.countries(region="EMEA")
 
     for row in result['country']:

@@ -19,5 +19,3 @@ def test_correct_number_of_rows_are_generated():
     df['ccy'] = df['country'].apply(lambda x: x.currency)
     df['country'] = df['country'].apply(lambda x: x.alpha3_code)
     df['trade_date'] = df['trade_year'].apply(lambda x: f"{x}-01-01")
-
-    print(df)

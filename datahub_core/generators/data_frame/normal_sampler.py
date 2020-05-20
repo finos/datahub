@@ -58,7 +58,7 @@ def normal_sampler(data, mu=0, sigma=None):
 def __normal_sampler(data, mu=0, sigma=None, key=None, context=None, randomstate=None, df=None):
 
     if not context.has_generator(key):
-        generator = NormalGenerator(randomstate, data.copy(), context.record_count, mu, sigma)
+        generator = NormalGenerator(random_state=randomstate, items=data, size=context.record_count, mu=mu, sigma=sigma)
         context.add_generator(key, generator)
 
     generator = context.get_generator(key)

@@ -37,9 +37,7 @@ def person(country_field):
             },
             count=50,
             randomstate=np.random.RandomState(13031981)
-        ).to_dataframe()
-
-        print(df)
+        ).to_dataframe()        
     """
 
     return functools.partial(__person, country_field)

@@ -22,5 +22,3 @@ def test_correct_number_of_rows_are_generated():
     df['sic_range'] = df['sic_range'].apply(lambda x: x.name)
     df['sic'] = df['sic'].apply(lambda x: x.name)
     df['country'] = df['country'].apply(lambda x: x.alpha3_code)
-
-    print(df)

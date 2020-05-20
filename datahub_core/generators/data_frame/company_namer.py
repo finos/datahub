@@ -46,8 +46,6 @@ def company_namer(field, field_type='sic', countrycode_field=None,):
             randomstate=np.random.RandomState(13031981)
         ).to_dataframe()
 
-        print(df)
-
     """
     return functools.partial(
         __company_namer,

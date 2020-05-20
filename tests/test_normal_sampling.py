@@ -7,8 +7,8 @@ def test_correct_number_of_rows_are_generated():
     df = gen.generate_from_model(
         props={
             'country': gen.normal_sampler(
-                mu=1,
-                data=data.countries())
+                data=data.countries(),
+                mu=1)
         },
         count=100000,
         randomstate=np.random.RandomState(13031981)

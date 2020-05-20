@@ -15,17 +15,14 @@ def create_initial_df(input_filename, groups, cols, aggregations):
     for c in cols:
         for a in aggregations:
             csv_headers.append(f'{c}_{a}')
-
-    print(csv_headers)
-
+    
     df = df_raw[all_cols].groupby(groups).agg(aggregations)
     s_buf = io.StringIO()
     df.to_csv(s_buf, header=csv_headers)
     s_buf.seek(0)
     df = pd.read_csv(s_buf)
     df = df.replace({pd.np.nan: None})
-    print(df)
-
+    
     return df
 
 def create_tree_structure(df, groups, cols, aggregations):
@@ -74,8 +71,7 @@ def create_tree_structure(df, groups, cols, aggregations):
                     stack_r[field]['total'] = total + count
                     stack_r[field][value]['count'] = stack_r[field][value]['count'] + count
                     stack_r = stack_r[field][value]
-
-            #print(stack)
+            
         stack = []
     return results
 

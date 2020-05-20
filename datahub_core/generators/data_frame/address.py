@@ -42,8 +42,7 @@ def address(country_field):
         df['postal)code'] = df['address'].apply(lambda x: x.postal_code)
 
         del df['address']
-
-        print(df)
+        
     """
     return functools.partial(
         __address,

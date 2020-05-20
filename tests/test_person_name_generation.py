@@ -13,5 +13,3 @@ def test_correct_number_of_rows_are_generated():
         count=50,
         randomstate=np.random.RandomState(13031981)
     ).to_dataframe()
-
-    print(df)

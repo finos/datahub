@@ -1,7 +1,9 @@
 #pylint:disable=unused-argument
 import functools
 import numpy as np
+from ..attribute_generators import ChoiceGenerator
 from ... import metrics as fr_metrics
+
 
 @fr_metrics.timeit
 def choice(data, weights=None):
@@ -44,6 +46,11 @@ def __choice(data, weights=None, key=None, context=None, randomstate=None, df=No
     if not randomstate:
         randomstate = np.random
 
-    if weights:
-        return randomstate.choice(data, p=weights)
-    return randomstate.choice(data)
+    if not context.has_generator(key):
+        generator = ChoiceGenerator(randomstate, data=data, weights=weights)
+        context.add_generator(key, generator)
+
+    generator = context.get_generator(key)
+    
+
+    return generator.make()

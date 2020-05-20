@@ -15,13 +15,7 @@ def generate_from_model(props, model=NoneModel(), count=50, randomstate=np.rando
     results = []
     context = Context(count)
 
-    for k, _ in props.items():
-        print(k)
-
-    for i in range(0, count):
-
-        if i% 100 == 0:
-            print(i)
+    for _ in range(0, count):
 
         result = generate_from_model_single(props, context, model, randomstate)
         results.append(result)
