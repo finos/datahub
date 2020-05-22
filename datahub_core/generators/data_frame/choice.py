@@ -41,6 +41,11 @@ def choice(data, weights=None):
         weights=weights
     )
 
+
+def bound_choice():
+    return functools.partial(ChoiceGenerator, weights=None)
+
+
 @fr_metrics.timeit
 def __choice(data, weights=None, key=None, context=None, randomstate=None, df=None):
     if not randomstate:
@@ -51,6 +56,5 @@ def __choice(data, weights=None, key=None, context=None, randomstate=None, df=No
         context.add_generator(key, generator)
 
     generator = context.get_generator(key)
-    
 
     return generator.make()

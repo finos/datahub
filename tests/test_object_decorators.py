@@ -10,7 +10,7 @@ class TestEntity:
     number: int
     count: int
     region: str
-    
+
     @od.counter()
     def set_count(self, value):
         self.count = value

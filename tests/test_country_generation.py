@@ -36,12 +36,12 @@ def test_countries_are_in_not_in_nam_target_region():
     result = gen.generate(
         props={
             "region": gen.choice(['NAM']),
-            "country": gen.country_codes(region_field="region")
+            "country": gen.country_codes(region_field="region", sampler=gen.bound_choice)
         },
         count=100,
         randomstate=np.random.RandomState(13031981)
     ).to_dataframe()
-    
+
     country_list = data.countries(region="EMEA")
 
     for row in result['country']:

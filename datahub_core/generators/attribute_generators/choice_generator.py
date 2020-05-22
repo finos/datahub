@@ -3,6 +3,7 @@ class ChoiceGenerator():
 
     @fr_metrics.timeit
     def __init__(self, random_state, data, weights=None):
+        print("--- NEW CHOiCE --- ")
         self.random_state = random_state
         self.data = data
         self.weights = weights
@@ -11,6 +12,5 @@ class ChoiceGenerator():
     def make(self):
         if self.weights:
             return self.random_state.choice(self.data, p=self.weights)
-        
-        print(self.data)
+
         return self.random_state.choice(self.data)
