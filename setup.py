@@ -4,13 +4,15 @@ from setuptools import setup, find_packages
 def __path(filename):
     return os.path.join(os.path.dirname(__file__), filename)
 
-VERSION = '0.9.3'
+VERSION = '0.9.10'
 
-setup(
-    name='datahub_core',
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setup(    
+    name='datahub_core-grovesy',
     version=VERSION,
-    url='https://github.com/finos/datahub',
-    license='',
+    url='https://github.com/finos/datahub',        
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     package_data={'datahub_core': [
         './data/codes.txt',
@@ -27,16 +29,12 @@ setup(
         './data/funds/regions.csv',
         './data/**'
     ]},
-    author='Paul Groves',    
+    author='grovesy',
+    author_email="paul.groves@citi.com",
     description='Synthetic data generation tools for financial markets',
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     include_package_data=True,
     zip_safe=True,
-    install_requires=[
-        'Faker',
-        'numpy',
-        'pandas',
-        'scipy',
-        'sklearn'
-    ]
+    
 )
-

@@ -2,8 +2,7 @@ from ... import metrics as fr_metrics
 class ChoiceGenerator():
 
     @fr_metrics.timeit
-    def __init__(self, random_state, data, weights=None):
-        print("--- NEW CHOiCE --- ")
+    def __init__(self, random_state, data, weights=None):        
         self.random_state = random_state
         self.data = data
         self.weights = weights

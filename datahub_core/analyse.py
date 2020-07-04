@@ -94,7 +94,7 @@ def create_initial_df(input_filename, groups, cols, aggregations, fit_distributi
     for c in cols:
         for a in aggregations:
             csv_headers.append(f'{c}_{a}')
-    
+
     dis_df = df_raw[all_cols].copy()
     df = df_raw[all_cols].groupby(groups).agg(aggregations)
     s_buf = io.StringIO()

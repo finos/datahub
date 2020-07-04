@@ -15,6 +15,7 @@ def test_choice():
     found_apac = False
     found_latam = False
 
+
     for row in df['region']:
         if row == 'NAM':
             found_nam = True

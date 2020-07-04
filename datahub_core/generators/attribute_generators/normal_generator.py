@@ -8,8 +8,7 @@ class NormalGenerator:
 
 
     @fr_metrics.timeit
-    def __init__(self, random_state, items=None, size=1000, mu=0, sigma=None):
-        print("-------- New NORMAL ----------")
+    def __init__(self, random_state, items=None, size=1000, mu=0, sigma=None):        
         self.random_state = random_state
         self.items = items
         self.data = []

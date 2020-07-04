@@ -17,7 +17,7 @@ def mark_synthetic():
     return decorator
 
 def country_codes():
-    return data_access.countries.get()
+    return data_access.countries()
 
 def industry_codes():
     return SicRawDataAccess().get_sic_data()

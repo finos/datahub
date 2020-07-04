@@ -1,3 +1,4 @@
+
 class LEI:
     """
     LEI Datatype, Legal Identifier is made up of a LOU code and
@@ -23,11 +24,12 @@ class LEI:
         """ Get the LEI code """
         return str(self.lou_code) \
             + self.lou_id \
-            + __rs232_checksum()
+            + self.__rs232_checksum()
 
-def __rs232_checksum():
-    """
-    Create a rs232 checksum
-    Internal DO NOT USE
-    """
-    return "0A"
+    def __rs232_checksum(self):
+        """
+        Create a rs232 checksum
+        Internal DO NOT USE
+        """
+        return "0A"
+
