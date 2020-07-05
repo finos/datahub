@@ -4,13 +4,13 @@ from setuptools import setup, find_packages
 def __path(filename):
     return os.path.join(os.path.dirname(__file__), filename)
 
-VERSION = '0.9.10'
+VERSION = '0.9.11'
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(    
-    name='datahub_core-grovesy',
+    name='datahub_core',
     version=VERSION,
     url='https://github.com/finos/datahub',        
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
@@ -31,10 +31,16 @@ setup(
     ]},
     author='grovesy',
     author_email="paul.groves@citi.com",
-    description='Synthetic data generation tools for financial markets',
+    description='Synthetic data generation tooling',
     long_description=long_description,
     long_description_content_type="text/markdown",
     include_package_data=True,
     zip_safe=True,
-    
+    install_requires=[
+        'Faker',
+        'numpy',
+        'pandas',
+        'scipy',
+        'sklearn'
+    ]
 )
