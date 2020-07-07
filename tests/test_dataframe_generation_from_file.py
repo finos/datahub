@@ -26,5 +26,3 @@ def test_correct_number_of_rows_are_generated():
     df['city'] = df['address'].map(lambda x: x.city)
     df['state'] = df['address'].map(lambda x: x.state)
     del df['address']
-
-    print(df)

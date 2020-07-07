@@ -24,7 +24,7 @@ def timeit(method):
         ]
 
         CSV.writerow(data)
-        # print(data)
+        
         return result
     return timed
 

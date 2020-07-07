@@ -1,11 +1,11 @@
 # pylint: disable=unused-argument
 import functools
-from .. import choice
+from datahub_core.generators.attribute_generators import CountryCodeGenerator
+from datahub_core.generators.data_frame import choice
 from ... import metrics as fr_metrics
-from ...libs.data_access import CountryDataAccess
 
 @fr_metrics.timeit
-def country_codes(region_field=None, fn_distribution=choice):
+def country_codes(region_field=None, sampler=choice.bound_choice):
     """
     Generate a country code, yields a country object from datahub_core.datasets.country
 
@@ -41,25 +41,28 @@ def country_codes(region_field=None, fn_distribution=choice):
     return functools.partial(
         __country_codes,
         region_field=region_field,
-        fn_distribution=fn_distribution)
+        sampler=sampler)
 
 @fr_metrics.timeit
 def __country_codes(
         region_field=None,
-        fn_distribution=choice,
         key=None,
         context=None,
         randomstate=None,
-        df=None):
+        df=None,
+        sampler=None):
     ''' Internal function '''
-    countries = []
+
+    region = None
 
     if region_field and df:
         region = df[region_field]
-        countries = CountryDataAccess().get(region)
-    else:
-        countries = CountryDataAccess().get()
+        key = key + "-" + region
 
-    value = fn_distribution(data=countries, weights=None)(df=df, randomstate=randomstate)
+    if not context.has_generator(key):
+        generator = CountryCodeGenerator(randomstate, region)
+        context.add_generator(key, generator)
 
-    return value
+    generator = context.get_generator(key)
+
+    return generator.make()

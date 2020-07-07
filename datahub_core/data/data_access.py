@@ -1,5 +1,28 @@
-from ..libs.data_access import country_data_access
+import csv
+from datahub_core.datasets import Country
+from datahub_core import resource
 from ..libs.data_access import sic_raw_data_access
+
+
+
+COUNTRIES = []
+
+def populate_countries():
+    raw = list(csv.reader(open(resource('country-codes.txt')), delimiter='\t'))
+    count = 0
+    for row in raw:
+        name = row[0]
+        alpha2 = row[1]
+        alpha3 = row[2]
+        locale = row[3]
+        currency = row[4]
+        region = row[5]
+
+        country = Country(name, alpha2, alpha3, locale, currency, region, count)
+        COUNTRIES.append(country)
+        count += 1
+
+populate_countries()
 
 def regions():
     """
@@ -13,8 +36,6 @@ def regions():
 
         from datahub_core import data
         regions = data.regions
-
-        print(regions)
 
         >> ['NAM', 'EMEA', 'LATAM', 'APAC' ]
 
@@ -53,9 +74,9 @@ def countries(region=None):
 
     """
     if region:
-        return country_data_access.CountryDataAccess().get(region)
+        return list(filter(lambda x: x.region == region, COUNTRIES))
 
-    return country_data_access.COUNTRIES
+    return COUNTRIES.copy()
 
 def client_types():
     return CLEINT_TYPES

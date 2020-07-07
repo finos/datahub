@@ -43,7 +43,6 @@ def address(country_field):
 
         del df['address']
 
-        print(df)
     """
     return functools.partial(
         __address,

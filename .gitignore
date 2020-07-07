@@ -4,6 +4,7 @@
 .temp
 .build
 env
+node_modules
 
 datahub_core/docs/
 datahub_core/**/*.md

@@ -2,9 +2,11 @@
 class Context:
 
     record_count = 0
-    generators = {}
+    generators = None
 
-    def __init__(self, record_count):
+    def __init__(self, record_count):        
+        self.record_count = record_count
+        self.generators = {}
         self.record_count = record_count
 
     def add_generator(self, key, generator):

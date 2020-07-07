@@ -57,8 +57,6 @@ def sic_industry(sic_range_field):
         df['sic'] = df['sic'].apply(lambda x: x.name)
         df['country'] = df['country'].apply(lambda x: x.alpha3_code)
 
-        print(df)
-
     """
     return functools.partial(__sic_industry, sic_range_field)
 
@@ -121,8 +119,6 @@ def sic_range():
         df['sic_range'] = df['sic_range'].apply(lambda x: x.name)
         df['sic'] = df['sic'].apply(lambda x: x.name)
         df['country'] = df['country'].apply(lambda x: x.alpha3_code)
-
-        print(df)
 
     """
 

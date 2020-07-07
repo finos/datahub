@@ -5,14 +5,14 @@ from ... import metrics as fr_metrics
 class NormalGenerator:
     """ Normal sampler, uses a list of items and draws a
     sample from it based on a normal distribution """
-    items = []
-    data = []
-    current = 0
+
 
     @fr_metrics.timeit
-    def __init__(self, random_state, items, size=1000, mu=0, sigma=None):
+    def __init__(self, random_state, items=None, size=1000, mu=0, sigma=None):        
         self.random_state = random_state
         self.items = items
+        self.data = []
+        self.current = 0
 
         # setup a normal distribution function to create samples
         lower, upper = 0, len(self.items)
@@ -31,6 +31,7 @@ class NormalGenerator:
         for index in indices:
             item = self.items[int(index)]
             self.data.append(item)
+
 
 
     @fr_metrics.timeit

@@ -54,11 +54,14 @@ def normal_sampler(data, mu=0, sigma=None):
 
     return functools.partial(__normal_sampler, data=data, mu=mu, sigma=sigma)
 
+def bound_normal(mu, sigma=None):
+    return functools.partial(NormalGenerator, mu=mu, sigma=None)
+
 @fr_metrics.timeit
 def __normal_sampler(data, mu=0, sigma=None, key=None, context=None, randomstate=None, df=None):
 
     if not context.has_generator(key):
-        generator = NormalGenerator(randomstate, data.copy(), context.record_count, mu, sigma)
+        generator = NormalGenerator(random_state=randomstate, items=data, size=context.record_count, mu=mu, sigma=sigma)
         context.add_generator(key, generator)
 
     generator = context.get_generator(key)

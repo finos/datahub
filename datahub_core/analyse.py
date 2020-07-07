@@ -95,7 +95,6 @@ def create_initial_df(input_filename, groups, cols, aggregations, fit_distributi
         for a in aggregations:
             csv_headers.append(f'{c}_{a}')
 
-    print(csv_headers)
     dis_df = df_raw[all_cols].copy()
     df = df_raw[all_cols].groupby(groups).agg(aggregations)
     s_buf = io.StringIO()
@@ -116,8 +115,6 @@ def create_initial_df(input_filename, groups, cols, aggregations, fit_distributi
                 print("Column: " + c + ' is best fit for ' + best_fit_name)
                 df.loc[index, c + '_best_fit_distribution'] = best_fit_name
                 df.loc[index, c + '_fit_parameter'] = ','.join(map(str, best_fit_params))
-
-    print(df)
     return df
 
 def create_tree_structure(df, groups, cols, aggregations, fit_distribution=False):
@@ -169,8 +166,7 @@ def create_tree_structure(df, groups, cols, aggregations, fit_distribution=False
                     stack_r[field]['total'] = total + count
                     stack_r[field][value]['count'] = stack_r[field][value]['count'] + count
                     stack_r = stack_r[field][value]
-
-            #print(stack)
+            
         stack = []
     return results
 

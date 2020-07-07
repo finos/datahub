@@ -1,7 +1,7 @@
 #pylint:disable=unused-argument, line-too-long
 import functools
 import numpy as np
-from ..libs.data_access import CountryDataAccess
+from datahub_core.data import data_access
 from ..libs.data_access import SicRawDataAccess
 from .attribute_generators.normal_generator import NormalGenerator
 from .attribute_generators.legal_entity_name_generator2 import LegalEntityNameGenerator2
@@ -17,7 +17,7 @@ def mark_synthetic():
     return decorator
 
 def country_codes():
-    return CountryDataAccess().get()
+    return data_access.countries()
 
 def industry_codes():
     return SicRawDataAccess().get_sic_data()
@@ -101,8 +101,6 @@ def random_range_int(low, high, _randomstate_lambda=None):
         def decorator_inner(self, *args, **kw):
             randomstate = __get_random_state(self, _randomstate_lambda)
             value = randomstate.uniform(low=low, high=high, size=1)[0]
-            #kw['value'] = value
-            #print(f"value={value}")
             return func(self, value)
         return decorator_inner
     return decorator
