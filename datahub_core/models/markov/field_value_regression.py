@@ -33,6 +33,13 @@ class FieldValueRegression(Printable):
                 return round(s, 2)
 
         mean, std = self.mean, self.std
+
+        if not mean:
+            mean = 0
+
+        if not std:
+            std = 0
+
         s = self.randomstate.normal(mean, std, 1)
         while s[0] < self.min or s[0] > self.max:
             s = self.randomstate.normal(mean, std, 1)
