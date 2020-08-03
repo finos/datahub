@@ -28,7 +28,7 @@ Contributed by [@andrewcarrblue](https://github.com/andrewcarrblue) - https://gi
 ---
 Contributed by [@BenFielding](https://github.com/BenFielding) - https://github.com/finos/datahub/issues/30#issuecomment-667943969
 
-### Requirements 
+## Requirements 
 Additional project requirements from [Gensyn](https://www.gensyn.ai/) perspective (highly representative synthetic data).
 
 | Requirement | Description | GitHub Issue Created |
@@ -37,7 +37,7 @@ Additional project requirements from [Gensyn](https://www.gensyn.ai/) perspectiv
 | Similarity-analysis | How closely does the generated data resemble the real data, does this prevent a privacy risk and can this be quantified? A common approach is Distance to Closest Record using Euclidean Distance. [Here](https://arxiv.org/abs/1806.03384). | <ul><li>[ ] </li></ul> |
 | Missing value specification | Are missing values in a column MCAR, MAR, or MNAR? Important when using generative models and listwise deletion. | <ul><li>[ ] </li></ul> |
 
-This also comes alongside an additional use case that we'd add to the above from @andrewcarrblue, which is:
+This also comes alongside an additional use case that we'd add to the above from [@andrewcarrblue](https://github.com/andrewcarrblue), which is:
 
 - Machine learning feature engineering - medium volume, realistic data, with realistic statistical shapes
 
