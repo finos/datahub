@@ -1,6 +1,6 @@
 # Language and Terminology
 
-The following language and terminology has been contributed through DataHub issue #30 and relates to the [DataHub](https://github.com/finos/datahub) and [DataHelix](https://github.com/finos/datahub) projects.
+The following language and terminology has been contributed through DataHub issue [#30](https://github.com/finos/datahub/issues/30) and relates to the [DataHub](https://github.com/finos/datahub) and [DataHelix](https://github.com/finos/datahub) projects.
 https://github.com/finos/datahub/issues/30
 
 ---
