@@ -11,31 +11,31 @@ To help us have a common language, would be great for us to agree terminology, u
 ## Types of data
 
 - **Reference data** 
-  - (slow to change).  
+  - Slow to change  
   - (1) Publicly available  
   - (2) Private ref data
 - **Event data** 
-  - (transaction logs, web logs, trade events, etc etc)
+  - Transaction logs, web logs, trade events, etc
 - **System data** 
-  - (configuration data for the system itself)
+  - Configuration data for the system itself
 
 ## Type of event data
 
 - **Independent events** 
-  - (rows which have no dependency on each other) / Dependent events
+  - Rows which have no dependency on each other) _verses_ Dependent events
 - **Rules based columns** 
-  - (columns which have dependencies/relationships on each other)
+  - Columns which have dependencies / relationships on each other
 - **Linked events** 
-  - rows which have a connection, relationship to data external to this table
+  - Rows which have a connection, relationship to data external to this table
 
 ## Use Cases
 
 - **Volume/throughput/stress testing** 
-  - high volume, reasonably realistic data
+  - High volume, reasonably realistic data
 - **Functional/feature** 
-  - low volume, super accurate/realistic data
+  - Low volume, super accurate / realistic data
 - **Machine learning training** 
-  - volume, realistic data, with realistic statistical shapes
+  - Volume, realistic data, with realistic statistical shapes
 
 ## Attributes
 - **Statistical profiles**
