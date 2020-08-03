@@ -25,11 +25,9 @@ Contributed by [@andrewcarrblue](https://github.com/andrewcarrblue) - https://gi
 | | Components with the ability to add code to generate data |
 | | The code to be able to access business logic to generate data which matches given rules (maybe even share business logic with code from the system?) |
 
----
-Contributed by [@BenFielding](https://github.com/BenFielding) - https://github.com/finos/datahub/issues/30#issuecomment-667943969
+### Requirements around highly representative synthetic data
 
-## Requirements 
-Additional project requirements from [Gensyn](https://www.gensyn.ai/) perspective (highly representative synthetic data).
+Contributed by [@BenFielding](https://github.com/BenFielding) from [Gensyn](https://www.gensyn.ai/) perspective - https://github.com/finos/datahub/issues/30#issuecomment-667943969
 
 | Requirement | Description | GitHub Issue Created |
 |---------- |------------- |----------|
