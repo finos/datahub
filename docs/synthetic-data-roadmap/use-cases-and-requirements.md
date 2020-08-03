@@ -13,7 +13,7 @@ Contributed by [@andrewcarrblue](https://github.com/andrewcarrblue) - https://gi
 ## Requirements for a Synthetic Data Generator
 ### Requirements around generating “similar” reasonably realistic data
 | Requirement | Description | GitHub Issue Created |
-|:-----|:-----|:-----|
+|:-----|:-----|:-----:|
 | | Ability to look at some given data, maybe production data and observe some profile, shape and characteristics of that data.  Which can then be used to generate some “life like” synthetic data |  <ul><li>[ ] </li></ul> |
 | | Ability to review the profile, shape and characteristics of the data observed, so sensitive enumerations, shapes, profiles, names etc can be removed, modified or changed | <ul><li>[ ] </li></ul> |
 | | Characteristics of data that would be good to be observable<ul><li>(Basic) Type of column – integer, float, string</li><li>Whether the column is an enum (enumeration) – a set of values from a given set</li><li>Whether the column is freeform text, and if so, what other characteristics does it have</li><li>Average length, min length, max length</li><li>Valid characters</li><li>Control characters (including end of line/return)</li></ul> | <ul><li>[ ] </li></ul> |
