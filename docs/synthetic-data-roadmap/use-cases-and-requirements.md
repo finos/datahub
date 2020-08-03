@@ -1,10 +1,10 @@
 # Use Cases and Requirements
 
-The following use cases and requirements have been contributed through DataHub issue #30 and relates to the [DataHub](https://github.com/finos/datahub) and [DataHelix](https://github.com/finos/datahub) projects.
+The following use cases and requirements have been contributed through DataHub issue [#30](https://github.com/finos/datahub/issues/30) and relates to the [DataHub](https://github.com/finos/datahub) and [DataHelix](https://github.com/finos/datahub) projects.
 https://github.com/finos/datahub/issues/30
 
 ---
-Originally contributed by @andrewcarrblue - https://github.com/finos/datahub/issues/30#issuecomment-651734549
+Originally contributed by [@andrewcarrblue](https://github.com/andrewcarrblue) - https://github.com/finos/datahub/issues/30#issuecomment-651734549
 
 ## Use Cases
 * High volume reasonably realistic data – typically used for soak tests, volume tests,
@@ -26,7 +26,7 @@ Originally contributed by @andrewcarrblue - https://github.com/finos/datahub/iss
 | | The code to be able to access business logic to generate data which matches given rules (maybe even share business logic with code from the system?) |
 
 ---
-Contributed by @BenFielding - https://github.com/finos/datahub/issues/30#issuecomment-667943969
+Contributed by [@BenFielding](https://github.com/BenFielding) - https://github.com/finos/datahub/issues/30#issuecomment-667943969
 
 ### Requirements 
 Additional project requirements from Gensyn perspective (highly representative synthetic data).
