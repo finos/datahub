@@ -29,7 +29,7 @@ Originally contributed by [@andrewcarrblue](https://github.com/andrewcarrblue) -
 Contributed by [@BenFielding](https://github.com/BenFielding) - https://github.com/finos/datahub/issues/30#issuecomment-667943969
 
 ### Requirements 
-Additional project requirements from Gensyn perspective (highly representative synthetic data).
+Additional project requirements from [Gensyn](https://www.gensyn.ai/) perspective (highly representative synthetic data).
 
 | Requirement | Description | GitHub Issue Created |
 |---------- |------------- |----------|
@@ -41,4 +41,4 @@ This also comes alongside an additional use case that we'd add to the above from
 
 - Machine learning feature engineering - medium volume, realistic data, with realistic statistical shapes
 
-This would be used by a machine learning researcher/developer/engineer to perform exploratory data analysis (EDA) and to build a prototype model, before deploying over a federated learning infrastructure (e.g. as provided by Gensyn).
+This would be used by a machine learning researcher/developer/engineer to perform exploratory data analysis (EDA) and to build a prototype model, before deploying over a federated learning infrastructure (e.g. as provided by [Gensyn](https://www.gensyn.ai/)).
