@@ -3,10 +3,10 @@
 The following use cases and requirements have been contributed through DataHub issue [#30](https://github.com/finos/datahub/issues/30) and relates to the [DataHub](https://github.com/finos/datahub) and [DataHelix](https://github.com/finos/datahub) projects.
 https://github.com/finos/datahub/issues/30
 
----
+## Use Cases
+
 Contributed by [@andrewcarrblue](https://github.com/andrewcarrblue) - https://github.com/finos/datahub/issues/30#issuecomment-651734549
 
-## Use Cases
 * High volume reasonably realistic data – typically used for soak tests, volume tests,
 * Lower volume hyper realistic data – typically used to check system functionality
  
