@@ -4,7 +4,7 @@ The following use cases and requirements have been contributed through DataHub i
 https://github.com/finos/datahub/issues/30
 
 ---
-Originally contributed by [@andrewcarrblue](https://github.com/andrewcarrblue) - https://github.com/finos/datahub/issues/30#issuecomment-651734549
+Contributed by [@andrewcarrblue](https://github.com/andrewcarrblue) - https://github.com/finos/datahub/issues/30#issuecomment-651734549
 
 ## Use Cases
 * High volume reasonably realistic data – typically used for soak tests, volume tests,
