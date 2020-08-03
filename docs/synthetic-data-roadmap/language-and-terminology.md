@@ -1,11 +1,10 @@
 # Language and Terminology
 
 The following language and terminology has been contributed through DataHub issue [#30](https://github.com/finos/datahub/issues/30) and relates to the [DataHub](https://github.com/finos/datahub) and [DataHelix](https://github.com/finos/datahub) projects.
-https://github.com/finos/datahub/issues/30
 
 ---
 
-Contributed by @andrewcarrblue - https://github.com/finos/datahub/issues/30#issuecomment-664355125
+Contributed by [@andrewcarrblue](https://github.com/andrewcarrblue) - https://github.com/finos/datahub/issues/30#issuecomment-664355125
 
 To help us have a common language, would be great for us to agree terminology, use cases
 
