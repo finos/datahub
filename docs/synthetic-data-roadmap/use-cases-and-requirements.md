@@ -12,7 +12,7 @@ Contributed by [@andrewcarrblue](https://github.com/andrewcarrblue) - https://gi
  
 ## Requirements for a Synthetic Data Generator
 ### Requirements around generating “similar” reasonably realistic data
-| Requirement | Description | GitHub Issue |
+| Requirement | Description | GitHub Issue Created |
 |:-----|:-----|:-----|
 | | Ability to look at some given data, maybe production data and observe some profile, shape and characteristics of that data.  Which can then be used to generate some “life like” synthetic data |
 | | Ability to review the profile, shape and characteristics of the data observed, so sensitive enumerations, shapes, profiles, names etc can be removed, modified or changed |
@@ -20,10 +20,10 @@ Contributed by [@andrewcarrblue](https://github.com/andrewcarrblue) - https://gi
 | | Whether there are any relationships between the columns (combinations of valid enumerations, values related to enumerations)<ul><li>Any more advanced distributions in value columns, Poisson, normal and other distributions</li><li>Advanced recognition of data types</li><li>Recognising financial services specific values such as RICs, ISINs, CUSIPs</li><li>Ability to generate custom field values based on code</li></ul> |
 
 ### Requirements around generating “hyper” realistic data
-| Requirement | Description | GitHub Issue |
+| Requirement | Description | GitHub Issue Created |
 |:-----|:-----|:-----|
-| | Components with the ability to add code to generate data |
-| | The code to be able to access business logic to generate data which matches given rules (maybe even share business logic with code from the system?) |
+| | Components with the ability to add code to generate data | <ul><li>[ ] </li></ul> |
+| | The code to be able to access business logic to generate data which matches given rules (maybe even share business logic with code from the system?) | <ul><li>[ ] </li></ul> |
 
 ### Requirements around highly representative synthetic data
 
