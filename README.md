@@ -18,6 +18,7 @@ A common question: Now that I have a data frame of synthetic-data, what do I do 
 1. For information on how to get started with DataHub see our [Getting Started Guide](https://github.com/finos/datahub/blob/master/docs/GettingStarted.md)
 2. For more technical information about DataHub and how to customize it, see the [Developer Guide](https://github.com/finos/datahub/blob/master/docs/DeveloperGuide.md)
 3. For a high-level road map see [Road Map](https://github.com/finos/datahub/blob/master/docs/roadmap.md)
+4. This project uses [Gravizo](https://g.gravizo.com) for all diagrams and charts as highlighted in [DataHub Issue 41](https://github.com/finos/datahub/issues/41).   
 
 ## Overview of Synthetic data
 
