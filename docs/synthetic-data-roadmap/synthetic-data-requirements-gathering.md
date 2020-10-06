@@ -1,4 +1,4 @@
-# Synthetic Data Team Approach for Gathering Requirements
+# Synthetic Data Approach for Gathering Requirements
 
 1. Synthetic Data Requirements Obtained and Available in DataHub GitHub
 
