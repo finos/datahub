@@ -1,6 +1,6 @@
 # Synthetic Data Approach for Gathering Requirements
 
-The following items describe the steps needed to gathering the Synthetic Data requirements for DataHub and DataHelix.
+The following items describe the steps needed to gather the Synthetic Data requirements for DataHub and DataHelix.
 
 1. Synthetic Data Requirements Obtained and Available in DataHub GitHub
 
@@ -12,7 +12,7 @@ The following items describe the steps needed to gathering the Synthetic Data re
 
 5. Direct / Influence DataHub and DataHelix roadmap based on input from the team.
 
-## Diagram Outlining Synthetic Data Team Approach
+### Diagram Outlining Synthetic Data Team Approach
 
 The following diagram was presented to the FINOS community on 10th September 2020.
 
