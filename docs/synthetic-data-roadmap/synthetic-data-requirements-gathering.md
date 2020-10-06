@@ -14,6 +14,6 @@ The following items describe the steps needed to gather the Synthetic Data requi
 
 ### Diagram Outlining Synthetic Data Team Approach
 
-The following diagram was presented to the FINOS community on 10th September 2020 and outlines the approach take above.
+The following diagram was presented to the FINOS community on 10th September 2020 and outlines the approach taken above.
 
 <img src="images/synthetic-data-requirements-gathering.png" width="650" />
