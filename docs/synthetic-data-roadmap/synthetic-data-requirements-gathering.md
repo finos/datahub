@@ -1,3 +1,3 @@
 # Synthetic Data Requirements Gathering
 
-![synthetic Data Requirements Gathering](images/synthetic-data-requirements-gathering.png)
+![synthetic Data Requirements Gathering =650x](images/synthetic-data-requirements-gathering.png)
