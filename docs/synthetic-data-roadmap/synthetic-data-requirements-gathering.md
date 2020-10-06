@@ -1,5 +1,7 @@
 # Synthetic Data Approach for Gathering Requirements
 
+The following items describe the steps needed to gathering the Synthetic Data requirements for DataHub and DataHelix.
+
 1. Synthetic Data Requirements Obtained and Available in DataHub GitHub
 
 2. Understand user stories of the clients who need a synthetic data solution or have a synthetic data problem.
