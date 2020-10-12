@@ -2,5 +2,6 @@
   "default": true,
   "MD033": {
     "allowed_elements": [ "table", "thead", "tbody", "th", "tr", "td", "ul", "li"]
-  }
+  },
+  "line-length": false
 }
