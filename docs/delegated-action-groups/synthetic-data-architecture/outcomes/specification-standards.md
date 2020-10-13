@@ -8,4 +8,4 @@ __status:__ DRAFT
 
 ## Abstract
 
-To allow interoperability between separately authored opensource (or commercial) synthetic data modules the elements of the pipeline should have clear specifications that are protocol agnostic (i.e. file, HTTP)
+To allow interoperability between separately authored open source (or commercial) synthetic data modules the elements of the pipeline should have clear specifications that are protocol agnostic (i.e. file, HTTP)

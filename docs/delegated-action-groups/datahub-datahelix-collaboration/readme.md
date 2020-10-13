@@ -17,14 +17,16 @@ DataHelix is Java-based, Java is a non-controversial choice well supported and a
 
 ## Structure / Skills
 
-| Role      |Name           |
-|-----------|---------------|
-| Chair     | James McLeod  |
-| DataHub   | Paul Groves   |
-| DataHelx  | Andrew Carr   |
+| Role       |Name           |
+|------------|---------------|
+| Chair      | James McLeod  |
+| DataHub    | Paul Groves   |
+| DataHelix  | Andrew Carr   |
 
 ## Timelines and Constraints
 
-Declare what is out of scope, urgency capacity from teams to contribute,
+TBD.
 
 ## Decisions
+
+TBD.

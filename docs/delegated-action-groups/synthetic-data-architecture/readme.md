@@ -17,11 +17,13 @@ Synthetic data is a complex subject with many approaches and moving parts, to sc
 |-----------|---------------|
 | Chair     | James McLeod  |
 | DataHub   | Paul Groves   |
-| DataHelx  | Andrew Carr   |
+| DataHelix  | Andrew Carr   |
 | GenSyn    | Ben Fielding  |
 
 ## Timelines and Constraints
 
-Declare what is out of scope, urgency capacity from teams to contribute,
+TBD.
 
 ## Decisions
+
+TBD.

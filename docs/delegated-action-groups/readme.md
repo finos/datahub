@@ -1,6 +1,6 @@
-# Delegate Action Groups
+# Delegate Action Groups
 
-Delegate Action groups are used to officially delegate decision making responsibility to address a specific challenge or problem in an open manner. The mandate for a dag is outlined in a POST document (Problem, Outcomes Structure, Timeline)
+Delegate Action groups are used to officially delegate decision making responsibility to address a specific challenge or problem in an open manner. The mandate for a dag is outlined in a POST document (Problem, Outcomes Structure, Timeline)
 
 ## Book of DAG
 
@@ -13,7 +13,7 @@ Delegate Action groups are used to officially delegate decision making�
 
 ``` bash
 ├── DELEGATE_ACTION_GROUP
-│   ├── post-short-description 1
+│   ├── post-short-description 1
 │   │     ├── POST.md   << Master document
 │   │     ├── outcomes
 │   │     │   ├── outcome-1.md  
@@ -24,7 +24,7 @@ Delegate Action groups are used to officially delegate decision making�
 │   │     │   ├── descision-2.md
 │   │     │   ├── descision-3.md
 │   │
-│   ├── post-short-description 2
+│   ├── post-short-description 2
 │   │    ├── POST.md   << Master document
 │   │    ├── outcomes
 │   │    │   ├── outcome-1.md  
@@ -37,90 +37,90 @@ Delegate Action groups are used to officially delegate decision making�
 
 ## Templates
 
-### POST documents
+### POST documents
 
-``` markdown
+``` markdown
 
-# TITLE
+# TITLE
 
-Status: Draft|In-Progress|Complete
+Status: Draft|In-Progress|Complete
 
-## Problem
+## Problem
 
-Describe the problem in 2/3 paragraphs
+Describe the problem in 2/3 paragraphs
 
-## Outcome
+## Outcome
 
-* [link] Short description of outcome 1
-* [link] Short description of outcome 2
-* [link] Short description of outcome 3
+* [link] Short description of outcome 1
+* [link] Short description of outcome 2
+* [link] Short description of outcome 3
 
-## Structure / Skills
+## Structure / Skills
 
-- [Chair] - <name>- [Data Science]
-- Fred Morris- [Big Data Export]
-- Someone Else- [Stakeholder 1]
-- A.Stakeholder- [Stakeholder 2]
-- B.Stakeholder- [Stakeholder 3] - C.Stakeholder
+- [Chair] - <name>- [Data Science]
+- Fred Morris- [Big Data Export]
+- Someone Else- [Stakeholder 1]
+- A.Stakeholder- [Stakeholder 2]
+- B.Stakeholder- [Stakeholder 3] - C.Stakeholder
 
-## Timelines and Constraints
+## Timelines and Constraints
 
-Declare what is out of scope, urgency capacity from teams to contribute,
+Declare what is out of scope, urgency capacity from teams to contribute,
 
-## Decisions
+## Decisions
 
-* [link] Short description of outcome 1  [Aproved|InProgress]
-* [link] Short description of outcome 2  [Aproved|InProgress]
-* [link] Short description of outcome 3  [Aproved|InProgress]
+* [link] Short description of outcome 1  [Aproved|InProgress]
+* [link] Short description of outcome 2  [Aproved|InProgress]
+* [link] Short description of outcome 3  [Aproved|InProgress]
 
 ```
 
 ### Objectives
 
-Objectives are written and approved as part of the DAG. While the DAG is in draft mode the objectives are fine-tuned Once all objectives are agreed the DAG moves from Draft to 'In Progress' While the DAG is in draft - create an issue for tracking conversation on the objective.
+Objectives are written and approved as part of the DAG. While the DAG is in draft mode the objectives are fine-tuned. Once all objectives are agreed the DAG moves from Draft to 'In Progress' While the DAG is in draft - Create an issue for tracking the conversation.
 
-Once the objective is agreed then the issue is closed the finalized objective text from the issue should be transferred to the objective document The 'issue' can then be 'closed' the /dag-name/objective/objective-name.md file becomes the final document.
-The Issue remains closed, re-opening the objective to make a major changes means the entire DAG moves back to DRAFT status.
+Once the objective is agreed then the issue is closed the finalized objective text from the issue should be transferred to the objective document The 'issue' can then be 'closed' the /dag-name/objective/objective-name.md file becomes the final document.
+The Issue remains closed, re-opening the objective to make a major changes means the entire DAG moves back to DRAFT status.
 
 ```markdown
 
-# Title
+# Title
 
-[Link] to the Github Issue for conversation[Link] to the associated decision when it's made
+[Link] to the Github Issue for conversation[Link] to the associated decision when it's made
 
-## Abstract
+## Abstract
 
-2/3 paragraphs on the outcome and what it achieves
+2/3 paragraphs on the outcome and what it achieves
 
 ```
 
-### Decision
+### Decision
 
-Decisions are made by the working group and correspond with the scope of the DAG and the declared objectives Decisions are the output of the DAG. Once all decisions are approved the DAG is 'complete decisions are binding for the future of the project.
+Decisions are made by the working group and correspond with the scope of the DAG and the declared objectives Decisions are the output of the DAG. Once all decisions are approved the DAG is 'complete' decisions are binding for the future of the project.
 
-Create an issue for tracking conversation on the issue Once the issue is closed the finalized decision text from the issue shoul be transferred to the decision document The issue can then be 'closed' the decision md file becomes the final document.
+Create an issue for tracking the conversation. Once the issue is closed the finalized decision text from the issue should be transferred to the decision document The issue can then be 'closed' the decision md file becomes the final document.
 
-``` markdown
+``` markdown
 
-# Title
+# Title
 
-Status: In-Progress | Complete
+Status: In-Progress | Complete
 
-[Link] to the Github Issue for conversation[Link] to the associated objective
+[Link] to the Github Issue for conversation[Link] to the associated objective
 
-## Abstract
+## Abstract
 
-2/3 paragraphs on the outcome and what it achieves
+2/3 paragraphs on the outcome and what it achieves
 
-## Consequences of the Decision
+## Consequences of the Decision
 
-What is the consequence of this decision being made - will it lead to a specific implementation, resourcing etc.
+What is the consequence of this decision being made - will it lead to a specific implementation, resourcing etc.
 
-## Alternatives?
+## Alternatives?
 
-Document any alternative decisions that could have been made
+Document any alternative decisions that could have been made
 
-## Decision Outcome
+## Decision Outcome
 
-Document the decisions that were made
+Document the decisions that were made
 ```
