@@ -1,27 +1,31 @@
 import numpy as np
+import datahub_core.analyse as analyse
+import datahub_core.models as models
 import datahub_core.generators as gen
-import datahub_core.data as data
 
-def run():
-    df = gen.generate(
-        props={
-            'region': gen.choice(
-                data=['EMEA', 'LATAM', 'NAM', 'APAC'],
-                weights=[0.1, 0.1, 0.3, 0.5]),
-            'firmAccount': gen.normal_sampler(
-                data=['fa1', 'fa2', 'fa3', 'fa4', 'fa5', 'fa6']),
-            "country": gen.country_codes(region_field='region'),
-            "client_type": gen.choice(data=data.client_types()),
-            "client_name": gen.company_namer(
-                field='client_type',
-                field_type='client_type',
-                countrycode_field='country'
-            )},
-        count=50,
-        randomstate=np.random.RandomState(13031981)
+
+def test_generate_model():
+    analyse.run('./train_data.csv', './train_data_output3.json',
+                groups=['b', 'c', 'e', 'f', 'g', 'h', 'i', 'm', 'n'],
+                cols=['a', 'd', 'j', 'k', 'l'],
+                fit_distribution=False)
+
+def test_generate_data(seed=123456):
+    random = np.random.RandomState(seed)
+    df = gen.generate_from_model(
+        props={},
+        model=models.MarkovModel('./train_data_output3.json', random),
+        count=100000
     ).to_dataframe()
 
-    print(df)
 
+    df['a'] = df['a'].map(lambda x: int(x))
+    df['d'] = df['d'].map(lambda x: int(x))
+    df['j'] = df['j'].map(lambda x: int(x))
+    df['k'] = df['k'].map(lambda x: int(x))
+    df['l'] = df['l'].map(lambda x: int(x))
 
-run()
+    df.to_csv('./train_data_output3.csv')
+
+test_generate_model()
+test_generate_data()
