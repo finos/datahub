@@ -4,7 +4,7 @@ from .generator import process_type
 
 class MarkovModel:
 
-    def __init__(self, filename, randomstate):        
+    def __init__(self, filename, randomstate):
         self.randomstate = randomstate
 
         with open(filename, 'r') as f:
