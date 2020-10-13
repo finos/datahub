@@ -1,4 +1,4 @@
-# Decision to integrate DataHelx and DataHub
+# Decision to integrate DataHelix and DataHub
 
 __Status:__ Draft
 
@@ -13,7 +13,7 @@ DataHelix is Java-based, Java is a non-controversial choice well supported and a
 ## Outcome
 
 * [[Link](./outcomes/single-underlying-technology.md)] Single underlying technology
-* [[link](./outcomes/single-underlying-technology.md)] Support of configuration lanaguage
+* [[Link](./outcomes/single-underlying-technology.md)] Support of configuration language
 
 ## Structure / Skills
 
