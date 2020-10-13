@@ -40,7 +40,6 @@ setup(
         'Faker',
         'numpy',
         'pandas',
-        'scipy',
-        'sklearn'
+        'scipy',        
     ]
 )
