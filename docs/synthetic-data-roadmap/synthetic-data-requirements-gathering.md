@@ -17,3 +17,7 @@ The following items describe the steps needed to gather the Synthetic Data requi
 4. Contact FINOS project teams and understand their Synthetic Data requirements. The first project being [Morphir](https://github.com/finos/morphir) and then [Alloy](https://github.com/finos/alloy).
 
 5. Direct / Influence DataHub and DataHelix roadmap based on input from the team.
+
+### Delegated Action Groups and GitHub Issues
+
+The outcomes of the requirements gathering exercise can be found in the [Delegated Action Groups](https://github.com/finos/datahub/tree/master/docs/delegated-action-groups) and [DataHub GitHub Issues](https://github.com/finos/datahub/issues).
