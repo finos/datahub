@@ -57,11 +57,12 @@ Describe the problem in 2/3 paragraphs
 
 ## Structure / Skills
 
-- [Chair] - <name>- [Data Science]
-- Fred Morris- [Big Data Export]
-- Someone Else- [Stakeholder 1]
-- A.Stakeholder- [Stakeholder 2]
-- B.Stakeholder- [Stakeholder 3] - C.Stakeholder
+- [Chair] - <name> - [Data Science]
+- Fred Morris - [Big Data Export]
+- Someone Else - [Stakeholder 1]
+- A.Stakeholder - [Stakeholder 2]
+- B.Stakeholder - [Stakeholder 3] 
+- C.Stakeholder - [Stakeholder 3] 
 
 ## Timelines and Constraints
 
