@@ -8,7 +8,7 @@ Synthetic data is a complex subject with many approaches and moving parts, to sc
 
 ## Outcomes
 
-* [[Link](./outcomes/single-underlying-technology.md)] Declare a typical synthetic-data pipeline process
+* [[Link](./outcomes/standard-pipeline-process.md)] Declare a typical synthetic-data pipeline process
 * [[Link](./outcomes/specification-standards.md)] Declare modules and specification standards
 
 ## Structure / Skills
