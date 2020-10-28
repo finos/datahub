@@ -1,10 +1,12 @@
-<H1>DataHub</H1> 
+<H1>DataHub</H1>
+
+[https://datahub.finos.org/](https://datahub.finos.org/)
 
 ![DataHub logo](https://raw.githubusercontent.com/finos/datahub/master/docs/logo.png) 
 
 _Synthetic data generation_
 
-DataHub is a set of python libraries dedicated to the production of synthetic data to be used in tests, machine learning training, statistical analysis, and other use cases [wiki](https://en.wikipedia.org/wiki/Synthetic_data). DataHub uses existing datasets to generate synthetic models. If no existing data is available it will use user-provided scripts and data rules to generate synthetic data using out-of-the-box helper datasets.
+[DataHub](https://datahub.finos.org/) is a set of python libraries dedicated to the production of synthetic data to be used in tests, machine learning training, statistical analysis, and other use cases [wiki](https://en.wikipedia.org/wiki/Synthetic_data). DataHub uses existing datasets to generate synthetic models. If no existing data is available it will use user-provided scripts and data rules to generate synthetic data using out-of-the-box helper datasets.
 
 Synthetic datasets are simply artificiality manufactured sets, produced to a desired degree of accuracy. Real Data does play a part in synthetic generation, all depending on the realism you require. The product roadmaps details out the functionality planned in this respect.
 
